@@ -1,0 +1,3827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChainsOS 10</title>
+    <style>
+        @font-face {
+            font-family: 'DSEG7Classic';
+            src: url(data:font/woff2;base64,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) format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, "Times New Roman", serif !important;
+            cursor: none !important;
+        }
+
+        body {
+            background-image: url('20260817052552603101.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #boot-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            z-index: 1000000;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+            pointer-events: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .boot-logo {
+            max-width: 200px;
+            max-height: 200px;
+            object-fit: contain;
+            user-select: none;
+        }
+
+        .boot-loader {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            animation: boot-spin 1.2s linear infinite;
+            user-select: none;
+        }
+
+        @keyframes boot-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        #lock-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(25px) saturate(150%);
+            -webkit-backdrop-filter: blur(25px) saturate(150%);
+            z-index: 999995;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .lock-time {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            margin-bottom: 5px;
+        }
+
+        .lock-date {
+            font-size: 1.5rem;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            margin-bottom: 40px;
+            color: #e0f7fc;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 320px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 30px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            overflow: hidden;
+            user-select: none;
+            margin-bottom: 25px;
+        }
+
+        .slider-text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            letter-spacing: 1px;
+            pointer-events: none;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .slider-handle {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(210, 235, 250, 0.8));
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            cursor: grab;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            font-size: 1.2rem;
+            color: #225577;
+            font-weight: bold;
+        }
+
+        .slider-handle:active { cursor: grabbing; }
+
+        .lock-icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lock-icon-container img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        }
+
+        .desktop {
+            flex: 1;
+            height: 100%;
+            position: relative;
+        }
+
+        .shelf-trigger-zone {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 12px;
+            z-index: 999605;
+            display: none;
+        }
+
+        .shelf-trigger-zone.active { display: block; }
+
+        .shortcut-shelf {
+            position: fixed;
+            top: 0;
+            left: 0px;
+            height: 48px;
+            width: auto;
+            min-width: 200px;
+            z-index: 999600;
+            pointer-events: auto;
+            user-select: none;
+            transform: translateX(-50%);
+            display: inline-flex;
+            align-items: center;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .shortcut-shelf.shelf-hidden { transform: translate(-50%, -100%); }
+        .shortcut-shelf.shelf-revealed { transform: translate(-50%, 0) !important; }
+
+        .shortcut-shelf img.shelf-bg {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        .shelf-icons-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 100%;
+            padding: 0 15px;
+            width: 100%;
+        }
+
+        .shelf-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        #trash-shelf-wrapper {
+            margin-left: auto;
+            order: 9999;
+        }
+
+        .shelf-item img {
+            height: 75%;
+            max-height: 36px;
+            width: auto;
+            object-fit: contain;
+            pointer-events: auto;
+            transition: transform 0.15s ease;
+        }
+
+        .shelf-item img:hover { transform: scale(1.1); }
+
+        /* ============================================
+           SKEUOMORPHIC GEARS PANEL - FULLY SHINY & DEPTH
+           ============================================ */
+        #gears-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 999850;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(180, 200, 220, 0.3) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 70%, rgba(200, 215, 235, 0.2) 0%, transparent 50%),
+                linear-gradient(145deg, #3a4048 0%, #2d3338 25%, #3f454d 50%, #2a2f35 75%, #353b42 100%);
+            border: none;
+            box-shadow: 
+                inset 0 0 80px rgba(255, 255, 255, 0.06),
+                inset 0 0 30px rgba(0, 0, 0, 0.4),
+                0 0 60px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+            transform: translateX(-110%);
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            padding: 30px 40px;
+            display: flex;
+            flex-direction: column;
+            pointer-events: none;
+            overflow-y: auto;
+            border-radius: 0 0 0 0;
+        }
+
+        /* Shine overlay - glass reflection */
+        #gears-panel::before {
+            content: '';
+            position: absolute;
+            top: -60%;
+            left: -60%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(ellipse at 25% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 75% 85%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+                linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 30%, transparent 70%, rgba(255,255,255,0.04) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Inner depth shadow and bevel */
+        #gears-panel::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            box-shadow: 
+                inset 0 2px 4px rgba(255, 255, 255, 0.08),
+                inset 0 -4px 8px rgba(0, 0, 0, 0.3),
+                inset 0 0 60px rgba(0, 0, 0, 0.15);
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 0;
+        }
+
+        #gears-panel.is-open {
+            transform: translateX(0%);
+            pointer-events: auto;
+        }
+
+        /* Left drag handle zone - brushed metal look */
+        #gears-drag-zone {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 100vh;
+            z-index: 999840;
+            cursor: ew-resize;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(180, 190, 200, 0.08) 0px,
+                    rgba(180, 190, 200, 0.08) 1px,
+                    rgba(255, 255, 255, 0.04) 2px,
+                    rgba(255, 255, 255, 0.04) 3px
+                ),
+                linear-gradient(180deg, rgba(60, 68, 78, 0.15) 0%, rgba(40, 46, 54, 0.25) 100%);
+            border-right: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        #gears-drag-zone:hover {
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(180, 190, 200, 0.15) 0px,
+                    rgba(180, 190, 200, 0.15) 1px,
+                    rgba(255, 255, 255, 0.08) 2px,
+                    rgba(255, 255, 255, 0.08) 3px
+                ),
+                linear-gradient(180deg, rgba(80, 88, 100, 0.25) 0%, rgba(50, 56, 66, 0.35) 100%);
+        }
+
+        #gears-drag-zone::after {
+            content: '⋮';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 18px;
+            letter-spacing: 4px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            transition: color 0.2s ease;
+        }
+
+        #gears-drag-zone:hover::after {
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        .gears-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 22px;
+            position: relative;
+            z-index: 1;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+            background: 
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 100%);
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .gears-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 
+                0 2px 12px rgba(0, 0, 0, 0.5),
+                0 1px 0 rgba(255, 255, 255, 0.1);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .gears-title::before {
+            content: '⚙';
+            font-size: 2rem;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+            opacity: 0.7;
+        }
+
+        .gears-close-btn {
+            width: 44px;
+            height: 44px;
+            background: 
+                radial-gradient(ellipse at 40% 35%, rgba(255,255,255,0.2) 0%, transparent 60%),
+                linear-gradient(180deg, #5a4a4a 0%, #3d2f2f 50%, #2a1f1f 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 
+                0 2px 12px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .gears-close-btn:hover {
+            background: 
+                radial-gradient(ellipse at 40% 35%, rgba(255,255,255,0.25) 0%, transparent 60%),
+                linear-gradient(180deg, #7a4a4a 0%, #5a3030 50%, #3d1f1f 100%);
+            border-color: rgba(255, 100, 100, 0.3);
+            transform: scale(1.06);
+            box-shadow: 
+                0 4px 20px rgba(200, 60, 60, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .gears-close-btn:active {
+            transform: scale(0.94);
+            box-shadow: 
+                inset 0 2px 8px rgba(0, 0, 0, 0.3),
+                0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gears-close-btn img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+            opacity: 0.8;
+        }
+
+        .gears-close-btn:hover img {
+            opacity: 1;
+        }
+
+        .gears-body {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-right: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gears-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .gears-body::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+            margin: 8px 0;
+        }
+
+        .gears-body::-webkit-scrollbar-thumb {
+            background: 
+                radial-gradient(ellipse at 40% 40%, rgba(255,255,255,0.2) 0%, rgba(180,190,200,0.15) 100%);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .gears-body::-webkit-scrollbar-thumb:hover {
+            background: 
+                radial-gradient(ellipse at 40% 40%, rgba(255,255,255,0.3) 0%, rgba(200,210,220,0.25) 100%);
+        }
+
+        .gears-section {
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 40%),
+                rgba(40, 46, 54, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 20px 24px;
+            backdrop-filter: blur(8px);
+            box-shadow: 
+                0 4px 20px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        .gears-section-title {
+            font-size: 1.0rem;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.5px;
+            margin-bottom: 14px;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .gears-section-title::before {
+            content: '';
+            width: 4px;
+            height: 18px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+            border-radius: 4px;
+        }
+
+        .gears-wallpaper-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .gears-wallpaper-item {
+            aspect-ratio: 16/9;
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.05) 0%, transparent 60%),
+                rgba(60, 68, 78, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.25s ease;
+            cursor: pointer;
+            text-align: center;
+            padding: 8px;
+            position: relative;
+            overflow: hidden;
+            min-height: 80px;
+            box-shadow: 
+                0 2px 10px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        }
+
+        .gears-wallpaper-item:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.08) 0%, transparent 60%),
+                rgba(70, 78, 88, 0.4);
+            transform: scale(1.02);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .gears-wallpaper-item.active {
+            border-color: rgba(100, 200, 255, 0.5);
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(100, 200, 255, 0.08) 0%, transparent 60%),
+                rgba(40, 80, 120, 0.25);
+            box-shadow: 0 0 30px rgba(100, 200, 255, 0.05), inset 0 1px 0 rgba(100, 200, 255, 0.1);
+        }
+
+        .gears-wallpaper-item .wp-preview {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .gears-wallpaper-item .wp-label {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(4px);
+            font-weight: bold;
+            letter-spacing: 0.3px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .gears-wallpaper-item .wp-check {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            z-index: 2;
+            color: #64c8ff;
+            font-size: 0.9rem;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+            display: none;
+        }
+
+        .gears-wallpaper-item.active .wp-check {
+            display: block;
+        }
+
+        /* WINDOW BASE STYLES */
+        .os-window {
+            position: absolute;
+            top: 60px;
+            left: 80px;
+            width: 620px;
+            height: 420px;
+            min-width: 320px;
+            min-height: 220px;
+            background: repeating-linear-gradient(
+                180deg,
+                #ffffff 0px,
+                #ffffff 3px,
+                #f0f6fa 3px,
+                #f0f6fa 6px
+            );
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 12px 12px 8px 8px;
+            box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 0 0 1px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            z-index: 999500;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.95);
+            transform-origin: bottom left;
+            transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s;
+        }
+
+        .os-window.is-open {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1) translate(0, 0);
+        }
+
+        .os-window.is-minimizing {
+            opacity: 0;
+            transform: scale(0.05) translateY(500px);
+            pointer-events: none;
+        }
+
+        .os-window.is-maximized {
+            top: 0 !important;
+            left: 0 !important;
+            width: calc(100vw - 280px) !important;
+            height: calc(100vh - 42px) !important;
+            border-radius: 0;
+        }
+
+        .resizer { position: absolute; z-index: 30; }
+        .resizer.top { top: 0; left: 10px; right: 10px; height: 6px; }
+        .resizer.bottom { bottom: 0; left: 10px; right: 10px; height: 6px; }
+        .resizer.left { left: 0; top: 10px; bottom: 10px; width: 6px; }
+        .resizer.right { right: 0; top: 10px; bottom: 10px; width: 6px; }
+        .resizer.top-left { top: 0; left: 0; width: 10px; height: 10px; }
+        .resizer.top-right { top: 0; right: 0; width: 10px; height: 10px; }
+        .resizer.bottom-left { bottom: 0; left: 0; width: 10px; height: 10px; }
+        .resizer.bottom-right { bottom: 0; right: 0; width: 10px; height: 10px; }
+
+        /* TRANSLUCENT SILVER TITLEBARS */
+        .os-titlebar {
+            height: 38px;
+            background: linear-gradient(180deg, rgba(220, 225, 235, 0.65) 0%, rgba(190, 198, 210, 0.6) 45%, rgba(165, 175, 190, 0.7) 50%, rgba(185, 195, 208, 0.6) 80%, rgba(210, 218, 228, 0.55) 100%);
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px;
+            user-select: none;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 -1px 5px rgba(100, 110, 130, 0.2);
+        }
+
+        .os-titlebar-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .window-controls-img {
+            height: 20px;
+            width: auto;
+            user-select: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .window-control-btn {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+        }
+
+        .os-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            color: #2a3a4a;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+        }
+
+        .os-title img { height: 18px; width: auto; }
+
+        .diskey-toolbar {
+            height: 40px;
+            background: linear-gradient(180deg, #f5fafe 0%, #dcecf5 50%, #c8e1f0 51%, #e2f1f9 100%);
+            border-bottom: 1px solid #b0c6d4;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            gap: 8px;
+        }
+
+        .diskey-nav-btn, .diskey-action-btn {
+            background: linear-gradient(180deg, #ffffff 0%, #e1eef6 50%, #ccdce8 51%, #eaf4fa 100%);
+            border: 1px solid #8ba8be;
+            color: #1e3646;
+            border-radius: 5px;
+            padding: 4px 12px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 1px 0 #ffffff;
+            text-shadow: 0 1px 0 #ffffff;
+        }
+
+        .diskey-path-bar {
+            flex: 1;
+            background: #ffffff;
+            border: 1px solid #9bb5c7;
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 0.85rem;
+            color: #1c3342;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+        }
+
+        .diskey-body {
+            flex: 1;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            grid-auto-rows: 95px;
+            gap: 12px;
+            overflow-y: auto;
+            align-content: start;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(5px);
+        }
+
+        .file-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6px;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            user-select: none;
+            text-align: center;
+            gap: 4px;
+            position: relative;
+        }
+
+        .file-item:hover {
+            background: rgba(180, 215, 235, 0.4);
+            border: 1px solid rgba(130, 180, 210, 0.6);
+        }
+
+        .file-item img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+        }
+
+        .file-item span {
+            font-size: 0.8rem;
+            color: #1a2b3c;
+            font-weight: bold;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+            word-break: break-word;
+            line-height: 1.1;
+            max-width: 80px;
+        }
+
+        .system-badge {
+            position: absolute;
+            top: 2px;
+            right: 4px;
+            font-size: 0.65rem;
+            color: #225577;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        /* AQUAFER APP GLOSSY REALISTIC STYLING */
+        #aquafer-window {
+            width: 750px;
+            height: 520px;
+            background: linear-gradient(135deg, rgba(220, 242, 255, 0.85) 0%, rgba(175, 220, 245, 0.75) 50%, rgba(140, 195, 230, 0.85) 100%);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 25px 60px rgba(0, 30, 60, 0.4), inset 0 2px 3px rgba(255, 255, 255, 0.9);
+        }
+
+        .aquafer-tabs {
+            display: flex;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(210, 235, 250, 0.6) 100%);
+            padding: 6px 10px 0 10px;
+            gap: 6px;
+            border-bottom: 1px solid rgba(130, 175, 205, 0.8);
+        }
+
+        .aquafer-tab {
+            padding: 6px 14px;
+            background: linear-gradient(180deg, #f0f8ff 0%, #d2e8f7 50%, #b8daf2 51%, #e0f0fa 100%);
+            border: 1px solid #7da6c2;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            font-size: 0.82rem;
+            color: #1a3c54;
+            box-shadow: inset 0 1px 0 #ffffff, 0 -1px 3px rgba(0, 0, 0, 0.05);
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .aquafer-tab.active {
+            background: linear-gradient(180deg, #ffffff 0%, #e6f4fd 60%, #ffffff 100%);
+            color: #004477;
+            border-color: #5c8cae;
+            box-shadow: inset 0 2px 0 #3399ff, 0 2px 0 #ffffff;
+        }
+
+        .aquafer-content {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .aquafer-panel { display: none; height: 100%; flex-direction: column; gap: 12px; }
+        .aquafer-panel.active { display: flex; }
+
+        .aquafer-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(230, 245, 255, 0.5) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 12px;
+            box-shadow: 0 4px 12px rgba(0, 30, 60, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1);
+        }
+
+        .aquafer-btn {
+            background: linear-gradient(180deg, #ffffff 0%, #d8ebf7 50%, #b0d3eb 51%, #f0f7fc 100%);
+            border: 1px solid #6b97b8;
+            border-radius: 6px;
+            padding: 6px 14px;
+            font-weight: bold;
+            color: #10344d;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 1px 0 #ffffff;
+            text-shadow: 0 1px 0 #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .aquafer-btn:hover {
+            background: linear-gradient(180deg, #ffffff 0%, #e8f4fc 50%, #c4e1f3 51%, #f8fcff 100%);
+            border-color: #4a7d9f;
+        }
+
+        .aquafer-input, .aquafer-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid #8caec4;
+            border-radius: 6px;
+            padding: 8px 10px;
+            font-size: 0.9rem;
+            color: #102a3a;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        .aquafer-textarea { resize: vertical; min-height: 120px; font-family: sans-serif !important; }
+
+        .aquafer-search-bar {
+            display: flex;
+            gap: 8px;
+        }
+
+        .aquafer-calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            text-align: center;
+        }
+
+        .calendar-day-header {
+            font-weight: bold;
+            padding: 4px;
+            font-size: 0.75rem;
+            color: #1a425e;
+        }
+
+        .calendar-day {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(150, 190, 215, 0.5);
+            border-radius: 6px;
+            min-height: 48px;
+            padding: 4px;
+            font-size: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: #0d2c40;
+            overflow: hidden;
+        }
+
+        .calendar-day.has-event {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-color: #64b5f6;
+        }
+
+        /* CALENDAR APP - PAPER/PLANNER STYLE (scoped to standalone Calendar app window only) */
+        #calendar-titlebar {
+            background: linear-gradient(180deg, rgba(255, 218, 176, 0.9) 0%, rgba(250, 194, 145, 0.9) 45%, rgba(240, 173, 114, 0.9) 50%, rgba(250, 199, 155, 0.85) 80%, rgba(255, 224, 186, 0.8) 100%) !important;
+            border-bottom: 1px solid rgba(255, 245, 230, 0.7) !important;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 5px rgba(150, 100, 40, 0.15) !important;
+        }
+
+        #calendar-window {
+            background:
+                repeating-linear-gradient(0deg, rgba(170, 135, 90, 0.07) 0px, rgba(170, 135, 90, 0.07) 1px, transparent 1px, transparent 27px),
+                linear-gradient(160deg, #fdf7ea 0%, #f8eeda 50%, #f3e6cd 100%) !important;
+        }
+
+        #calendar-window, #calendar-window * {
+            font-family: 'Segoe Print', 'Bradley Hand', 'Comic Sans MS', cursive !important;
+        }
+
+        #calendar-window .aquafer-card {
+            background: linear-gradient(160deg, #fffdf7 0%, #faf2e0 100%) !important;
+            border: 1px solid #d9bf94 !important;
+            box-shadow: 0 3px 10px rgba(120, 90, 40, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+        }
+
+        #calendar-window #calendarapp-month-title {
+            font-size: 1.25rem !important;
+            color: #7a4a12 !important;
+            letter-spacing: 0.5px;
+        }
+
+        #calendar-window .aquafer-input {
+            background: #fffdf8 !important;
+            border: 1px solid #d9bf94 !important;
+            color: #5a3d1a !important;
+            box-shadow: inset 0 1px 3px rgba(120, 90, 40, 0.15) !important;
+        }
+
+        #calendar-window .aquafer-btn {
+            background: linear-gradient(180deg, #ffedd2 0%, #f3cf9a 50%, #e8b978 51%, #f7dcac 100%) !important;
+            border: 1px solid #c9964f !important;
+            color: #5a3410 !important;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+        }
+
+        #calendar-window .aquafer-btn:hover {
+            background: linear-gradient(180deg, #fff3de 0%, #f8dba8 50%, #edc282 51%, #fbe3ba 100%) !important;
+        }
+
+        #calendar-window .calendar-day-header {
+            color: #8a5a1e !important;
+            font-size: 0.85rem !important;
+        }
+
+        #calendar-window .calendar-day {
+            background: #fffdf7 !important;
+            border: 1px solid #e0c9a0 !important;
+            color: #5a3d1a !important;
+        }
+
+        #calendar-window .calendar-day.has-event {
+            background: linear-gradient(135deg, #fff0d6 0%, #ffdca0 100%) !important;
+            border-color: #e0a94c !important;
+        }
+
+        .collab-board-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 10px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .collab-note {
+            background: linear-gradient(135deg, #ffffff 0%, #e1f3fe 100%);
+            border: 1px solid #91c4e5;
+            border-radius: 8px;
+            padding: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            color: #15384d;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100px;
+        }
+
+        /* NEW CALCAPP STYLING */
+        #calcapp-window {
+            width: 320px;
+            height: 420px;
+            background: linear-gradient(135deg, rgba(230, 240, 250, 0.9) 0%, rgba(200, 220, 240, 0.85) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 50px rgba(0, 30, 60, 0.4);
+        }
+
+        .calc-body-surface {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            background: linear-gradient(160deg, #3a3a3a 0%, #2c2c2c 50%, #1f1f1f 100%);
+        }
+
+        .calc-display {
+            background: linear-gradient(180deg, #0a0a0a 0%, #000000 60%, #060606 100%);
+            border: 1px solid #000000;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-family: 'DSEG7Classic', 'Consolas', monospace !important;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            text-align: right;
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 20px rgba(200, 220, 255, 0.15);
+            box-shadow: inset 0 3px 6px rgba(0,0,0,0.9), inset 0 -1px 2px rgba(255,255,255,0.05), 0 1px 0 rgba(255,255,255,0.1);
+            margin-bottom: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .calc-display::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 45%;
+            background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 100%);
+            border-radius: 6px 6px 0 0;
+            pointer-events: none;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            flex: 1;
+        }
+
+        .calc-btn {
+            background: linear-gradient(180deg, #ffb347 0%, #ff8c1a 50%, #e8720a 51%, #ffa236 100%);
+            border: 1px solid #b85c00;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #3a1c00;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calc-btn:hover {
+            background: linear-gradient(180deg, #ffc264 0%, #ff9d33 50%, #f08020 51%, #ffb050 100%);
+        }
+
+        .calc-btn:active {
+            background: linear-gradient(180deg, #e8720a 0%, #d86800 50%, #c85f00 51%, #e8720a 100%);
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.4);
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 280px;
+            height: calc(100vh - 42px);
+            background:
+                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, rgba(0, 0, 0, 0.09) 2px, rgba(0, 0, 0, 0.09) 3px),
+                linear-gradient(100deg, #4a5157 0%, #363c40 30%, #2a2f33 55%, #1c2023 100%);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5), inset 1px 0 1px rgba(255, 255, 255, 0.15), inset -1px 0 2px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 20px;
+            z-index: 999700;
+        }
+
+        .desktop {
+            margin-right: 280px;
+        }
+
+        .clock-widget {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .clock-time {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .clock-date {
+            font-size: 0.95rem;
+            margin-top: 5px;
+            color: #d0f0f8;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .sticky-note {
+            background: linear-gradient(135deg, #ffffaa 0%, #f4ea70 100%);
+            color: #333300;
+            border-radius: 2px 2px 2px 18px;
+            padding: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset -10px -10px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            position: relative;
+            transform: rotate(-1deg);
+        }
+
+        .sticky-note-header {
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            padding-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555500;
+        }
+
+        .sticky-note-textarea {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            resize: none;
+            color: #222200;
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+
+        /* START MENU RESTORED TO ORIGINAL DIMENSIONS & GRID LAYOUT */
+        .start-menu {
+            position: absolute;
+            bottom: 48px;
+            left: 6px;
+            width: 240px;
+            height: 350px;
+            background-image: url('menu.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+            z-index: 999800;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .start-menu.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .start-menu-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 10px;
+            width: 100%;
+            justify-items: center;
+        }
+
+        .start-menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6px;
+            border-radius: 8px;
+            user-select: none;
+            transition: background 0.15s ease, transform 0.1s ease;
+            width: 54px;
+            height: 54px;
+        }
+
+        .start-menu-item:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.08);
+        }
+
+        .start-menu-item img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+        }
+
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 42px;
+            background:
+                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0px, rgba(255, 255, 255, 0.12) 1px, rgba(0, 0, 0, 0.04) 2px, rgba(0, 0, 0, 0.04) 3px),
+                linear-gradient(180deg, #eef0f2 0%, #d7dade 12%, #c3c7cc 50%, #aeb2b8 88%, #c9ccd1 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            padding: 0 6px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 1px rgba(0, 0, 0, 0.15), 0 -2px 10px rgba(0, 0, 0, 0.25);
+            z-index: 999900;
+            gap: 6px;
+        }
+
+        .menu-button-container {
+            position: relative;
+            height: 32px;
+            width: 32px;
+            margin-right: 6px;
+            display: block;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        .menu-btn-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .menu-btn-light { opacity: 1; }
+        .menu-btn-clicked { opacity: 0; }
+
+        .taskbar.menu-toggled .menu-btn-light { opacity: 0; }
+        .taskbar.menu-toggled .menu-btn-clicked { opacity: 1; }
+
+        .taskbar-apps {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: 100%;
+            flex: 1;
+        }
+
+        .taskbar-app-item {
+            height: 32px;
+            padding: 0 10px;
+            background: rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            user-select: none;
+            transition: background 0.15s ease;
+            position: relative;
+        }
+
+        .taskbar-app-item:hover { background: rgba(255, 255, 255, 0.45); }
+
+        .taskbar-app-item.pinned {
+            border-bottom: 2px solid #0055aa;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .taskbar-app-item img {
+            height: 20px;
+            width: 20px;
+            object-fit: contain;
+        }
+
+        .taskbar-app-item span {
+            font-size: 0.85rem;
+            color: #113344;
+            font-weight: bold;
+        }
+
+        /* SKEUOMORPHIC TASKBAR SEARCH BAR */
+        .taskbar-search-wrapper {
+            position: relative;
+            margin-left: auto;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .taskbar-search-input {
+            width: 180px;
+            height: 28px;
+            background: linear-gradient(180deg, #d8eaf5 0%, #ffffff 40%, #ffffff 100%);
+            border: 1px solid #7093a8;
+            border-radius: 14px;
+            padding: 0 12px;
+            font-size: 0.8rem;
+            color: #102a3a;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255, 255, 255, 0.8);
+            outline: none;
+            transition: width 0.2s ease, border-color 0.2s;
+        }
+
+        .taskbar-search-input:focus {
+            width: 240px;
+            border-color: #2e82be;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 6px rgba(50, 150, 220, 0.6);
+        }
+
+        .taskbar-search-results {
+            position: absolute;
+            bottom: 38px;
+            right: 0;
+            width: 300px;
+            max-height: 280px;
+            background: linear-gradient(180deg, rgba(240, 248, 255, 0.95) 0%, rgba(210, 232, 245, 0.95) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid #81a5ba;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 20, 40, 0.35), inset 0 1px 0 #ffffff;
+            display: none;
+            flex-direction: column;
+            overflow-y: auto;
+            padding: 8px;
+            gap: 6px;
+            z-index: 999950;
+        }
+
+        .taskbar-search-results.is-active { display: flex; }
+
+        .search-result-item {
+            background: linear-gradient(180deg, #ffffff 0%, #e6f2fa 100%);
+            border: 1px solid #9bbbd0;
+            border-radius: 5px;
+            padding: 6px 10px;
+            color: #113344;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            cursor: pointer;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+        }
+
+        .search-result-item:hover {
+            background: linear-gradient(180deg, #ffffff 0%, #cce5f7 100%);
+            border-color: #5392c2;
+        }
+
+        .search-result-type {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #2b608a;
+        }
+
+        #custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+            z-index: 3000000;
+            background-image: url('mouse pointer.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: translate(0, 0);
+        }
+
+        /* CUSTOM POPUP STYLES */
+        .os-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+            z-index: 2000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+        }
+
+        .os-popup-overlay.is-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .os-popup-box {
+            width: 360px;
+            background: linear-gradient(180deg, #ffffff 0%, #eaf4fb 100%);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 20, 50, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transform: scale(0.9);
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .os-popup-overlay.is-visible .os-popup-box {
+            transform: scale(1);
+        }
+
+        .os-popup-header {
+            height: 32px;
+            background: linear-gradient(180deg, #ffffff 0%, #cae2ee 100%);
+            border-bottom: 1px solid #a2b9c7;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            color: #1a3c54;
+        }
+
+        .os-popup-body {
+            padding: 16px;
+            font-size: 0.9rem;
+            color: #112233;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .os-popup-input {
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #8ba8be;
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 0.85rem;
+            color: #102a3a;
+            outline: none;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .os-popup-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            padding: 10px 16px;
+            background: rgba(220, 235, 245, 0.5);
+            border-top: 1px solid #c2d6e3;
+        }
+
+        .os-popup-btn {
+            background: linear-gradient(180deg, #ffffff 0%, #d8ebf7 50%, #b0d3eb 51%, #f0f7fc 100%);
+            border: 1px solid #6b97b8;
+            border-radius: 5px;
+            padding: 4px 14px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            color: #10344d;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), inset 0 1px 0 #ffffff;
+            text-shadow: 0 1px 0 #ffffff;
+        }
+
+        .os-popup-btn:hover {
+            background: linear-gradient(180deg, #ffffff 0%, #e8f4fc 50%, #c4e1f3 51%, #f8fcff 100%);
+        }
+
+        .os-popup-btn.primary {
+            border-color: #2e82be;
+            background: linear-gradient(180deg, #ffffff 0%, #cbe3f5 50%, #90c4e8 51%, #e4f1fa 100%);
+        }
+
+        /* WELCOME POPUP MODAL STYLES */
+        .welcome-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(6px);
+            z-index: 2000005;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .welcome-popup-overlay.is-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .welcome-popup-box {
+            width: 420px;
+            background: linear-gradient(180deg, #ffffff 0%, #eaf4fb 100%);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 25px 50px rgba(0, 20, 50, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transform: scale(0.85);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .welcome-popup-overlay.is-visible .welcome-popup-box {
+            transform: scale(1);
+        }
+
+        .welcome-popup-header {
+            height: 38px;
+            background: linear-gradient(180deg, #ffffff 0%, #cae2ee 100%);
+            border-bottom: 1px solid #a2b9c7;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 14px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            color: #1a3c54;
+        }
+
+        .welcome-popup-body {
+            padding: 20px;
+            font-size: 0.95rem;
+            color: #112233;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            line-height: 1.4;
+        }
+
+        .welcome-popup-actions {
+            display: flex;
+            justify-content: flex-end;
+            padding: 12px 20px;
+            background: rgba(220, 235, 245, 0.5);
+            border-top: 1px solid #c2d6e3;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="boot-chime" src="start sound.wav" preload="auto"></audio>
+    <audio id="alert-chime" src="chime.wav" preload="auto"></audio>
+    <audio id="error-chime" src="Error.wav" preload="auto"></audio>
+    <audio id="tap-sound" src="tap.wav" preload="auto"></audio>
+    <audio id="confirm-sound" src="confirm.wav" preload="auto"></audio>
+
+    <div id="boot-screen">
+        <img src="logo.png" alt="ChainsOS Logo" class="boot-logo">
+        <img src="mouse pointer buffer.png" alt="Loading" class="boot-loader">
+    </div>
+
+    <div id="lock-screen">
+        <div class="lock-time" id="lock-time">12:00 AM</div>
+        <div class="lock-date" id="lock-date">Monday, January 1</div>
+        
+        <div class="slider-container" id="slider-container">
+            <div class="slider-text">slide to unlock</div>
+            <div class="slider-handle" id="slider-handle">➔</div>
+        </div>
+
+        <div class="lock-icon-container">
+            <img src="lock.png" alt="Lock Status" id="lock-display-icon">
+        </div>
+    </div>
+
+    <div class="desktop">
+        <div class="shelf-trigger-zone" id="shelf-trigger-zone"></div>
+        <div class="shortcut-shelf" id="shortcut-shelf">
+            <img src="shortcut shelf.png" alt="Shortcut Shelf" class="shelf-bg">
+            <div class="shelf-icons-container" id="shelf-icons-container">
+                <div class="shelf-item">
+                    <img src="diskey.png" alt="Diskey" id="diskey-app-icon" class="diskey-icon">
+                </div>
+                <div class="shelf-item" id="trash-shelf-wrapper">
+                    <img src="trash empty.png" alt="Trash" id="trash-icon" class="trash-icon">
+                </div>
+            </div>
+        </div>
+
+        <!-- SKEUOMORPHIC GEARS PANEL - FULL SCREEN, SHINY & DEPTH -->
+        <div id="gears-panel">
+            <div class="gears-header">
+                <div class="gears-title">
+                    <span>Gears</span>
+                </div>
+                <button class="gears-close-btn" id="gears-close-btn">
+                    <img src="X.png" alt="Close">
+                </button>
+            </div>
+            <div class="gears-body">
+                <div class="gears-section">
+                    <div class="gears-section-title">Wallpaper</div>
+                    <div class="gears-wallpaper-grid" id="gears-wallpaper-grid">
+                        <div class="gears-wallpaper-item active" data-wallpaper="default">
+                            <span class="wp-label">Default</span>
+                            <span class="wp-check">✓</span>
+                        </div>
+                        <div class="gears-wallpaper-item" data-wallpaper="placeholder1">
+                            <span class="wp-label">Wallpaper 1</span>
+                            <span class="wp-check">✓</span>
+                        </div>
+                        <div class="gears-wallpaper-item" data-wallpaper="placeholder2">
+                            <span class="wp-label">Wallpaper 2</span>
+                            <span class="wp-check">✓</span>
+                        </div>
+                        <div class="gears-wallpaper-item" data-wallpaper="placeholder3">
+                            <span class="wp-label">Wallpaper 3</span>
+                            <span class="wp-check">✓</span>
+                        </div>
+                        <div class="gears-wallpaper-item" data-wallpaper="placeholder4">
+                            <span class="wp-label">Wallpaper 4</span>
+                            <span class="wp-check">✓</span>
+                        </div>
+                        <div class="gears-wallpaper-item" data-wallpaper="placeholder5">
+                            <span class="wp-label">Wallpaper 5</span>
+                            <span class="wp-check">✓</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GEARS DRAG ZONE (left edge) -->
+        <div id="gears-drag-zone"></div>
+
+        <!-- DISKEY WINDOW -->
+        <div class="os-window" id="diskey-window">
+            <div class="resizer top"></div><div class="resizer bottom"></div>
+            <div class="resizer left"></div><div class="resizer right"></div>
+            <div class="resizer top-left"></div><div class="resizer top-right"></div>
+            <div class="resizer bottom-left"></div><div class="resizer bottom-right"></div>
+
+            <div class="os-titlebar" id="diskey-titlebar">
+                <div class="os-titlebar-left">
+                    <div style="position: relative; display: inline-block;">
+                        <img src="the window controls.png" alt="Controls" class="window-controls-img">
+                        <div id="btn-minimize-diskey" class="window-control-btn" style="position: absolute; left: 0; top: 0; width: 33%; height: 100%;"></div>
+                        <div id="btn-maximize-diskey" class="window-control-btn" style="position: absolute; left: 33%; top: 0; width: 33%; height: 100%;"></div>
+                        <div id="btn-close-diskey" class="window-control-btn" style="position: absolute; left: 66%; top: 0; width: 34%; height: 100%;"></div>
+                    </div>
+                    <div class="os-title">
+                        <img src="diskey.png" alt="Diskey">
+                        <span>Diskey File Explorer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="diskey-toolbar">
+                <button class="diskey-nav-btn" id="diskey-back">🠔 Back</button>
+                <div class="diskey-path-bar" id="diskey-path">HD></div>
+                <button class="diskey-action-btn" id="diskey-new-folder">+ New Folder</button>
+            </div>
+            <div class="diskey-body" id="diskey-file-container"></div>
+        </div>
+
+        <!-- AQUAFER MULTITOOL HUB WINDOW -->
+        <div class="os-window" id="aquafer-window">
+            <div class="resizer top"></div><div class="resizer bottom"></div>
+            <div class="resizer left"></div><div class="resizer right"></div>
+            <div class="resizer top-left"></div><div class="resizer top-right"></div>
+            <div class="resizer bottom-left"></div><div class="resizer bottom-right"></div>
+
+            <div class="os-titlebar" id="aquafer-titlebar">
+                <div class="os-titlebar-left">
+                    <div style="position: relative; display: inline-block;">
+                        <img src="the window controls.png" alt="Controls" class="window-controls-img">
+                        <div id="btn-minimize-aquafer" class="window-control-btn" style="position: absolute; left: 0; top: 0; width: 33%; height: 100%;"></div>
+                        <div id="btn-maximize-aquafer" class="window-control-btn" style="position: absolute; left: 33%; top: 0; width: 33%; height: 100%;"></div>
+                        <div id="btn-close-aquafer" class="window-control-btn" style="position: absolute; left: 66%; top: 0; width: 34%; height: 100%;"></div>
+                    </div>
+                    <div class="os-title">
+                        <img src="aquafer.png" alt="Aquafer Hub">
+                        <span>Aquafer Multitool Hub</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aquafer-tabs">
+                <button class="aquafer-tab active" data-tab="hub">Central Hub</button>
+                <button class="aquafer-tab" data-tab="wordpad">WordPad (.aqu)</button>
+                <button class="aquafer-tab" data-tab="search">Search & Preview</button>
+                <button class="aquafer-tab" data-tab="calendar">Calendar</button>
+                <button class="aquafer-tab" data-tab="collab">Public Collab Board</button>
+            </div>
+
+            <div class="aquafer-content">
+                <!-- PANEL 1: HUB -->
+                <div class="aquafer-panel active" id="panel-hub">
+                    <div class="aquafer-card" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h2 style="color: #10344d; font-size: 1.4rem;">Aquafer Hub</h2>
+                            <p style="color: #2c5978; font-size: 0.85rem;">System Dashboard & Quick Launch</p>
+                        </div>
+                        <div id="aquafer-hub-clock" style="font-size: 1.5rem; font-weight: bold; color: #0d3852;">12:00:00 AM</div>
+                    </div>
+                    <div class="aquafer-card">
+                        <h4 style="color: #10344d; margin-bottom: 8px;">Quick Launch App Shortcuts</h4>
+                        <div style="display: flex; gap: 12px;">
+                            <button class="aquafer-btn" id="hub-launch-diskey">
+                                <img src="diskey.png" style="width: 20px; height: 20px;"> Diskey Explorer
+                            </button>
+                        </div>
+                        <div style="display: flex; gap: 8px; align-items: center; margin-top: 12px; flex-wrap: wrap;">
+                            <select id="hub-quicklaunch-select" class="aquafer-input" style="flex: 1; min-width: 160px;"></select>
+                            <button class="aquafer-btn" id="hub-add-quicklaunch">+ Add Shortcut</button>
+                        </div>
+                        <div id="hub-quicklaunch-grid" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px;"></div>
+                    </div>
+                </div>
+
+                <!-- PANEL 2: WORDPAD -->
+                <div class="aquafer-panel" id="panel-wordpad">
+                    <div class="aquafer-card" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                        <input type="text" id="aqu-file-name" class="aquafer-input" placeholder="File Name (e.g., Document1)" style="flex: 1; min-width: 160px;">
+                        <button class="aquafer-btn" id="btn-open-from-diskey">Open File...</button>
+                        <button class="aquafer-btn" id="btn-save-aqu">Save to HD> \ Aquafer</button>
+                    </div>
+                    <textarea id="aqu-file-content" class="aquafer-textarea" placeholder="Type document content here..."></textarea>
+                </div>
+
+                <!-- PANEL 3: SEARCH & PREVIEW -->
+                <div class="aquafer-panel" id="panel-search">
+                    <div class="aquafer-search-bar">
+                        <input type="text" id="aquafer-search-input" class="aquafer-input" placeholder="Search files across system...">
+                        <button class="aquafer-btn" id="btn-run-search">Search</button>
+                    </div>
+                    <div class="aquafer-card" style="flex: 1; overflow-y: auto;" id="aquafer-search-results">
+                        <p style="color: #4a7796; font-style: italic;">Enter a search query above...</p>
+                    </div>
+                </div>
+
+                <!-- PANEL 4: CALENDAR -->
+                <div class="aquafer-panel" id="panel-calendar">
+                    <div class="aquafer-card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                        <span id="calendar-month-title" style="font-weight: bold; color: #10344d;">Month Year</span>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <input type="text" id="calendar-event-input" class="aquafer-input" placeholder="Add event for day..." style="width: 160px;">
+                            <input type="number" id="calendar-day-input" class="aquafer-input" placeholder="Day #" style="width: 65px;" min="1" max="31">
+                            <button class="aquafer-btn" id="btn-add-event">Add Event</button>
+                            <button class="aquafer-btn" id="btn-export-calendar-aqu">Export Calendar as .aqu</button>
+                        </div>
+                    </div>
+                    <div class="aquafer-card" style="flex: 1;">
+                        <div class="aquafer-calendar-grid" id="calendar-headers">
+                            <div class="calendar-day-header">Sun</div><div class="calendar-day-header">Mon</div>
+                            <div class="calendar-day-header">Tue</div><div class="calendar-day-header">Wed</div>
+                            <div class="calendar-day-header">Thu</div><div class="calendar-day-header">Fri</div>
+                            <div class="calendar-day-header">Sat</div>
+                        </div>
+                        <div class="aquafer-calendar-grid" id="calendar-days-grid" style="margin-top: 6px;"></div>
+                    </div>
+                </div>
+
+                <!-- PANEL 5: COLLAB BOARD -->
+                <div class="aquafer-panel" id="panel-collab">
+                    <div class="aquafer-card" style="display: flex; gap: 8px;">
+                        <input type="text" id="collab-note-input" class="aquafer-input" placeholder="Post a public note or idea to board...">
+                        <button class="aquafer-btn" id="btn-post-collab">Post Note</button>
+                        <button class="aquafer-btn" id="btn-export-collab-aqu">Export Board as .aqu</button>
+                    </div>
+                    <div class="collab-board-grid" id="collab-board-grid"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW CALCULATOR APP WINDOW -->
+        <div class="os-window" id="calcapp-window">
+            <div class="resizer top"></div><div class="resizer bottom"></div>
+            <div class="resizer left"></div><div class="resizer right"></div>
+            <div class="resizer top-left"></div><div class="resizer top-right"></div>
+            <div class="resizer bottom-left"></div><div class="resizer bottom-right"></div>
+
+            <div class="os-titlebar" id="calcapp-titlebar">
+                <div class="os-titlebar-left">
+                    <div style="position: relative; display: inline-block;">
+                        <img src="the window controls.png" alt="Controls" class="window-controls-img">
+                        <div id="btn-minimize-calc" class="window-control-btn" style="position: absolute; left: 0; top: 0; width: 33%; height: 100%;"></div>
+                        <div id="btn-maximize-calc" class="window-control-btn" style="position: absolute; left: 33%; top: 0; width: 33%; height: 100%;"></div>
+                        <div id="btn-close-calc" class="window-control-btn" style="position: absolute; left: 66%; top: 0; width: 34%; height: 100%;"></div>
+                    </div>
+                    <div class="os-title">
+                        <img src="cauculater.png" alt="Calculator" style="width: 18px; height: 18px;">
+                        <span>Calculator</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-body-surface">
+                <div class="calc-display" id="calc-display">0</div>
+                <div class="calc-grid" id="calc-grid">
+                    <button type="button" class="calc-btn" data-action="clear" data-val="">C</button>
+                    <button type="button" class="calc-btn" data-action="sign" data-val="">±</button>
+                    <button type="button" class="calc-btn" data-action="percent" data-val="">%</button>
+                    <button type="button" class="calc-btn" data-action="operator" data-val="/">÷</button>
+                    <button type="button" class="calc-btn" data-action="digit" data-val="7">7</button>
+                    <button type="button" class="calc-btn" data-action="digit" data-val="8">8</button>
+                    <button type="button" class="calc-btn" data-action="digit" data-val="9">9</button>
+                    <button type="button" class="calc-btn" data-action="operator" data-val="*">×</button>
+                    <button type="button" class="calc-btn" data-action="digit" data-val="4">4</button>
+                    <button type="button" class="calc-btn" data-action="digit" data-val="5">5</button>
+                    <button type="button" class="calc-btn" data-action="digit" data-val="6">6</button>
+                    <button type="button" class="calc-btn" data-action="operator" data-val="-">-</button>
+                    <button type="button" class="calc-btn" data-action="digit" data-val="1">1</button>
+                    <button type="button" class="calc-btn" data-action="digit" data-val="2">2</button>
+                    <button type="button" class="calc-btn" data-action="digit" data-val="3">3</button>
+                    <button type="button" class="calc-btn" data-action="operator" data-val="+">+</button>
+                    <button type="button" class="calc-btn" data-action="digit" data-val="0" style="grid-column: span 2;">0</button>
+                    <button type="button" class="calc-btn" data-action="decimal" data-val=".">.</button>
+                    <button type="button" class="calc-btn" data-action="calculate" data-val="">=</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW CALENDAR APP WINDOW -->
+        <div class="os-window" id="calendar-window">
+            <div class="resizer top"></div><div class="resizer bottom"></div>
+            <div class="resizer left"></div><div class="resizer right"></div>
+            <div class="resizer top-left"></div><div class="resizer top-right"></div>
+            <div class="resizer bottom-left"></div><div class="resizer bottom-right"></div>
+
+            <div class="os-titlebar" id="calendar-titlebar">
+                <div class="os-titlebar-left">
+                    <div style="position: relative; display: inline-block;">
+                        <img src="the window controls.png" alt="Controls" class="window-controls-img">
+                        <div id="btn-minimize-calendar" class="window-control-btn" style="position: absolute; left: 0; top: 0; width: 33%; height: 100%;"></div>
+                        <div id="btn-maximize-calendar" class="window-control-btn" style="position: absolute; left: 33%; top: 0; width: 33%; height: 100%;"></div>
+                        <div id="btn-close-calendar" class="window-control-btn" style="position: absolute; left: 66%; top: 0; width: 34%; height: 100%;"></div>
+                    </div>
+                    <div class="os-title">
+                        <img src="calendar.png" alt="Calendar" style="width: 18px; height: 18px;">
+                        <span>Calendar</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 15px; display: flex; flex-direction: column; flex: 1; gap: 12px; background: rgba(255, 255, 255, 0.4); overflow-y: auto;">
+                <div class="aquafer-card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                    <span id="calendarapp-month-title" style="font-weight: bold; color: #10344d;">Month Year</span>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <input type="text" id="calendarapp-event-input" class="aquafer-input" placeholder="Add event for day..." style="width: 160px;">
+                        <input type="number" id="calendarapp-day-input" class="aquafer-input" placeholder="Day #" style="width: 65px;" min="1" max="31">
+                        <button class="aquafer-btn" id="btn-add-event-calendarapp">Add Event</button>
+                    </div>
+                </div>
+                <div class="aquafer-card" style="flex: 1;">
+                    <div class="aquafer-calendar-grid" id="calendarapp-headers">
+                        <div class="calendar-day-header">Sun</div><div class="calendar-day-header">Mon</div>
+                        <div class="calendar-day-header">Tue</div><div class="calendar-day-header">Wed</div>
+                        <div class="calendar-day-header">Thu</div><div class="calendar-day-header">Fri</div>
+                        <div class="calendar-day-header">Sat</div>
+                    </div>
+                    <div class="aquafer-calendar-grid" id="calendarapp-days-grid" style="margin-top: 6px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW CONTACTS APP WINDOW -->
+        <div class="os-window" id="contacts-window">
+            <div class="resizer top"></div><div class="resizer bottom"></div>
+            <div class="resizer left"></div><div class="resizer right"></div>
+            <div class="resizer top-left"></div><div class="resizer top-right"></div>
+            <div class="resizer bottom-left"></div><div class="resizer bottom-right"></div>
+
+            <div class="os-titlebar" id="contacts-titlebar">
+                <div class="os-titlebar-left">
+                    <div style="position: relative; display: inline-block;">
+                        <img src="the window controls.png" alt="Controls" class="window-controls-img">
+                        <div id="btn-minimize-contacts" class="window-control-btn" style="position: absolute; left: 0; top: 0; width: 33%; height: 100%;"></div>
+                        <div id="btn-maximize-contacts" class="window-control-btn" style="position: absolute; left: 33%; top: 0; width: 33%; height: 100%;"></div>
+                        <div id="btn-close-contacts" class="window-control-btn" style="position: absolute; left: 66%; top: 0; width: 34%; height: 100%;"></div>
+                    </div>
+                    <div class="os-title">
+                        <img src="contacts.png" alt="Contacts" style="width: 18px; height: 18px;">
+                        <span>Contacts</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 15px; display: flex; flex-direction: column; flex: 1; gap: 12px; background: rgba(255, 255, 255, 0.4); overflow-y: auto;">
+                <div class="aquafer-card" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <input type="text" id="contact-name-input" class="aquafer-input" placeholder="Name" style="flex: 1; min-width: 120px;">
+                    <input type="text" id="contact-email-input" class="aquafer-input" placeholder="Email" style="flex: 1; min-width: 120px;">
+                    <input type="text" id="contact-phone-input" class="aquafer-input" placeholder="Phone" style="flex: 1; min-width: 120px;">
+                    <button class="aquafer-btn" id="btn-add-contact">Add Contact</button>
+                </div>
+                <div class="aquafer-card" style="flex: 1; overflow-y: auto;" id="contacts-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="clock-widget">
+            <div class="clock-time" id="clock-time">12:00:00 AM</div>
+            <div class="clock-date" id="clock-date">Monday, January 1</div>
+        </div>
+
+        <div class="sticky-note">
+            <div class="sticky-note-header">Notes</div>
+            <textarea class="sticky-note-textarea" id="sticky-note-input" placeholder="Type a note..."></textarea>
+        </div>
+    </div>
+
+    <!-- START MENU RESTORED WITH ALPHABETICAL GRID -->
+    <div class="start-menu" id="start-menu">
+        <div class="start-menu-items" id="start-menu-grid">
+            <div class="start-menu-item" id="start-calc-item" title="Calculator">
+                <img src="cauculater.png" alt="Calculator">
+            </div>
+            <div class="start-menu-item" id="start-aquafer-item" title="Aquafer Multitool Hub">
+                <img src="aquafer.png" alt="Aquafer">
+            </div>
+            <div class="start-menu-item" id="start-diskey-item" title="Diskey File Explorer">
+                <img src="diskey.png" alt="Diskey">
+            </div>
+            <div class="start-menu-item" id="start-calendar-item" title="Calendar">
+                <img src="calendar.png" alt="Calendar">
+            </div>
+            <div class="start-menu-item" id="start-contacts-item" title="Contacts">
+                <img src="contacts.png" alt="Contacts">
+            </div>
+        </div>
+    </div>
+
+    <div class="taskbar" id="main-taskbar">
+        <a href="#" class="menu-button-container" id="menu-trigger" role="button" aria-label="Toggle Menu">
+            <img src="menu button.png" alt="Menu" class="menu-btn-image menu-btn-light">
+            <img src="menu button clicked.png" alt="Menu (clicked)" class="menu-btn-image menu-btn-clicked">
+        </a>
+        <div class="taskbar-apps" id="taskbar-apps"></div>
+        <div class="taskbar-search-wrapper">
+            <input type="text" class="taskbar-search-input" id="global-search-input" placeholder="Search system...">
+            <div class="taskbar-search-results" id="global-search-results"></div>
+        </div>
+    </div>
+
+    <div id="custom-cursor"></div>
+
+    <!-- OS POPUP MODAL OVERLAY -->
+    <div class="os-popup-overlay" id="os-popup-overlay">
+        <div class="os-popup-box">
+            <div class="os-popup-header" id="os-popup-title">System Message</div>
+            <div class="os-popup-body">
+                <div id="os-popup-message">Message text...</div>
+                <input type="text" id="os-popup-input" class="os-popup-input" style="display: none;">
+            </div>
+            <div class="os-popup-actions">
+                <button class="os-popup-btn" id="os-popup-cancel" style="display: none;">Cancel</button>
+                <button class="os-popup-btn primary" id="os-popup-ok">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WELCOME POPUP MODAL OVERLAY -->
+    <div class="welcome-popup-overlay" id="welcome-popup-overlay">
+        <div class="welcome-popup-box">
+            <div class="welcome-popup-header">
+                <span>Welcome to ChainsOS 10</span>
+            </div>
+            <div class="welcome-popup-body">
+                <h3>Welcome!</h3>
+                <p>Thank you for exploring ChainsOS 10. Enjoy using the system!</p>
+            </div>
+            <div class="welcome-popup-actions">
+                <button class="os-popup-btn primary" id="welcome-popup-dismiss">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ====================================================
+        // 🔥 BOOT CHIME - PLAYS INSTANTLY ON PAGE LOAD
+        // ====================================================
+        (function playBootChimeImmediately() {
+            const bootChime = document.getElementById('boot-chime');
+            if (bootChime) {
+                const playPromise = bootChime.play();
+                if (playPromise && playPromise.catch) {
+                    playPromise.catch(() => {
+                        const unlockAudio = () => {
+                            bootChime.play().catch(() => {});
+                            document.removeEventListener('click', unlockAudio);
+                            document.removeEventListener('touchstart', unlockAudio);
+                            document.removeEventListener('keydown', unlockAudio);
+                        };
+                        document.addEventListener('click', unlockAudio);
+                        document.addEventListener('touchstart', unlockAudio);
+                        document.addEventListener('keydown', unlockAudio);
+                    });
+                }
+            }
+        })();
+
+        // TAP SOUND - 1 in 20 chance on any click
+        const tapSound = document.getElementById('tap-sound');
+        
+        function playTapSound() {
+            if (Math.random() < 0.05) {
+                tapSound.currentTime = 0;
+                tapSound.play().catch(() => {});
+            }
+        }
+
+        document.addEventListener('click', playTapSound);
+
+        // CONFIRM SOUND - plays when any popup button is clicked
+        const confirmSound = document.getElementById('confirm-sound');
+        
+        function playConfirmSound() {
+            confirmSound.currentTime = 0;
+            confirmSound.play().catch(() => {});
+        }
+
+        /* CUSTOM SYSTEM POPUP FRAMEWORK */
+        const popupOverlay = document.getElementById('os-popup-overlay');
+        const popupTitle = document.getElementById('os-popup-title');
+        const popupMessage = document.getElementById('os-popup-message');
+        const popupInput = document.getElementById('os-popup-input');
+        const popupOkBtn = document.getElementById('os-popup-ok');
+        const popupCancelBtn = document.getElementById('os-popup-cancel');
+
+        popupOkBtn.addEventListener('click', playConfirmSound);
+        popupCancelBtn.addEventListener('click', playConfirmSound);
+
+        function osAlert(message, title = "System Message") {
+            return new Promise((resolve) => {
+                popupTitle.textContent = title;
+                popupMessage.textContent = message;
+                popupInput.style.display = "none";
+                popupCancelBtn.style.display = "none";
+                popupOkBtn.textContent = "OK";
+                popupOverlay.classList.add('is-visible');
+
+                if (/error|denied/i.test(title)) {
+                    playErrorChime();
+                }
+
+                const handleOk = () => {
+                    popupOverlay.classList.remove('is-visible');
+                    popupOkBtn.removeEventListener('click', handleOk);
+                    resolve();
+                };
+                popupOkBtn.addEventListener('click', handleOk);
+            });
+        }
+
+        function osConfirm(message, title = "System Confirmation") {
+            return new Promise((resolve) => {
+                popupTitle.textContent = title;
+                popupMessage.textContent = message;
+                popupInput.style.display = "none";
+                popupCancelBtn.style.display = "inline-block";
+                popupOkBtn.textContent = "OK";
+                popupOverlay.classList.add('is-visible');
+                playAlertChime();
+
+                const handleOk = () => {
+                    cleanup();
+                    resolve(true);
+                };
+                const handleCancel = () => {
+                    cleanup();
+                    resolve(false);
+                };
+                const cleanup = () => {
+                    popupOverlay.classList.remove('is-visible');
+                    popupOkBtn.removeEventListener('click', handleOk);
+                    popupCancelBtn.removeEventListener('click', handleCancel);
+                };
+
+                popupOkBtn.addEventListener('click', handleOk);
+                popupCancelBtn.addEventListener('click', handleCancel);
+            });
+        }
+
+        function osPrompt(message, defaultValue = "", title = "System Input") {
+            return new Promise((resolve) => {
+                popupTitle.textContent = title;
+                popupMessage.textContent = message;
+                popupInput.style.display = "block";
+                popupInput.value = defaultValue;
+                popupCancelBtn.style.display = "inline-block";
+                popupOkBtn.textContent = "OK";
+                popupOverlay.classList.add('is-visible');
+                setTimeout(() => popupInput.focus(), 50);
+
+                const handleOk = () => {
+                    const val = popupInput.value;
+                    cleanup();
+                    resolve(val);
+                };
+                const handleCancel = () => {
+                    cleanup();
+                    resolve(null);
+                };
+                const handleKey = (e) => {
+                    if (e.key === 'Enter') handleOk();
+                };
+                const cleanup = () => {
+                    popupOverlay.classList.remove('is-visible');
+                    popupOkBtn.removeEventListener('click', handleOk);
+                    popupCancelBtn.removeEventListener('click', handleCancel);
+                    popupInput.removeEventListener('keydown', handleKey);
+                };
+
+                popupOkBtn.addEventListener('click', handleOk);
+                popupCancelBtn.addEventListener('click', handleCancel);
+                popupInput.addEventListener('keydown', handleKey);
+            });
+        }
+
+        const alertChime = document.getElementById('alert-chime');
+        const errorChime = document.getElementById('error-chime');
+
+        function playAlertChime() {
+            alertChime.currentTime = 0;
+            alertChime.play().catch(() => {});
+        }
+
+        function playErrorChime() {
+            errorChime.currentTime = 0;
+            errorChime.play().catch(() => {});
+        }
+
+        const bootScreen = document.getElementById('boot-screen');
+        const randomBootDuration = Math.floor(Math.random() * (40000 - 10000 + 1)) + 10000;
+
+        setTimeout(() => {
+            bootScreen.style.opacity = '0';
+            setTimeout(() => {
+                bootScreen.style.display = 'none';
+            }, 1000);
+        }, randomBootDuration);
+
+        const lockScreen = document.getElementById('lock-screen');
+        const sliderContainer = document.getElementById('slider-container');
+        const sliderHandle = document.getElementById('slider-handle');
+        const lockDisplayIcon = document.getElementById('lock-display-icon');
+        const welcomeOverlay = document.getElementById('welcome-popup-overlay');
+        const welcomeDismissBtn = document.getElementById('welcome-popup-dismiss');
+        let isDraggingSlider = false;
+        let startXSlider = 0;
+        let maxSlide = 0;
+
+        function updateMaxSlide() {
+            maxSlide = sliderContainer.clientWidth - sliderHandle.clientWidth - 10;
+        }
+        updateMaxSlide();
+        window.addEventListener('resize', updateMaxSlide);
+
+        sliderHandle.addEventListener('mousedown', (e) => {
+            isDraggingSlider = true;
+            startXSlider = e.clientX - sliderHandle.offsetLeft;
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDraggingSlider) return;
+            let currentX = e.clientX - startXSlider;
+            if (currentX < 5) currentX = 5;
+            if (currentX > maxSlide + 5) currentX = maxSlide + 5;
+            
+            sliderHandle.style.left = `${currentX}px`;
+
+            if (currentX >= maxSlide + 5) {
+                isDraggingSlider = false;
+                unlockOS();
+            }
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (!isDraggingSlider) return;
+            isDraggingSlider = false;
+            sliderHandle.style.transition = 'left 0.3s ease';
+            sliderHandle.style.left = '5px';
+            setTimeout(() => {
+                sliderHandle.style.transition = '';
+            }, 300);
+        });
+
+        function unlockOS() {
+            lockDisplayIcon.src = 'lock2.png';
+            setTimeout(() => {
+                lockScreen.style.opacity = '0';
+                setTimeout(() => {
+                    lockScreen.style.display = 'none';
+                    welcomeOverlay.classList.add('is-visible');
+                    playAlertChime();
+                }, 800);
+            }, 150);
+        }
+
+        welcomeDismissBtn.addEventListener('click', () => {
+            welcomeOverlay.classList.remove('is-visible');
+        });
+
+        // ====================================================
+        // 🛠️ GEARS PANEL - DRAG TO OPEN FROM LEFT EDGE (FIXED)
+        // ====================================================
+        const gearsPanel = document.getElementById('gears-panel');
+        const gearsDragZone = document.getElementById('gears-drag-zone');
+        const gearsCloseBtn = document.getElementById('gears-close-btn');
+        let isDraggingGears = false;
+        let gearDragStartX = 0;
+        let gearPanelOpen = false;
+
+        gearsDragZone.addEventListener('mousedown', (e) => {
+            isDraggingGears = true;
+            gearDragStartX = e.clientX;
+            document.body.style.userSelect = 'none';
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDraggingGears) return;
+            const deltaX = e.clientX - gearDragStartX;
+            const threshold = 60;
+
+            if (deltaX > threshold && !gearPanelOpen) {
+                gearsPanel.classList.add('is-open');
+                gearPanelOpen = true;
+                isDraggingGears = false;
+                document.body.style.userSelect = '';
+            }
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (isDraggingGears) {
+                isDraggingGears = false;
+                document.body.style.userSelect = '';
+            }
+        });
+
+        // Close gears with X button
+        gearsCloseBtn.addEventListener('click', () => {
+            gearsPanel.classList.remove('is-open');
+            gearPanelOpen = false;
+        });
+
+        // Close gears by clicking outside (but not on drag zone)
+        document.addEventListener('click', (e) => {
+            if (gearsPanel.classList.contains('is-open')) {
+                const isClickInsideGears = gearsPanel.contains(e.target);
+                const isClickOnDragZone = gearsDragZone.contains(e.target);
+                if (!isClickInsideGears && !isClickOnDragZone) {
+                    gearsPanel.classList.remove('is-open');
+                    gearPanelOpen = false;
+                }
+            }
+        });
+
+        // ====================================================
+        // 🖼️ WALLPAPER SELECTION
+        // ====================================================
+        document.querySelectorAll('.gears-wallpaper-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.gears-wallpaper-item').forEach(el => el.classList.remove('active'));
+                this.classList.add('active');
+                const wallpaperId = this.getAttribute('data-wallpaper');
+                osAlert(`Wallpaper "${wallpaperId}" selected! (Placeholder)`, "Wallpaper");
+            });
+        });
+
+        // ====================================================
+        // REST OF ORIGINAL CODE
+        // ====================================================
+        const shelf = document.getElementById('shortcut-shelf');
+        const shelfTriggerZone = document.getElementById('shelf-trigger-zone');
+        let shelfHideTimeout = null;
+
+        function centerShelfOnDeviceX() {
+            const middleX = window.innerWidth / 2;
+            shelf.style.left = `${middleX}px`;
+        }
+        centerShelfOnDeviceX();
+        window.addEventListener('resize', centerShelfOnDeviceX);
+
+        function updateShelfVisibilityState() {
+            const anyMaximized = document.querySelector('.os-window.is-open.is-maximized');
+            if (anyMaximized) {
+                shelf.classList.add('shelf-hidden');
+                shelfTriggerZone.classList.add('active');
+            } else {
+                shelf.classList.remove('shelf-hidden', 'shelf-revealed');
+                shelfTriggerZone.classList.remove('active');
+            }
+        }
+
+        function revealShelfBriefly() {
+            if (!shelf.classList.contains('shelf-hidden')) return;
+            shelf.classList.add('shelf-revealed');
+            if (shelfHideTimeout) clearTimeout(shelfHideTimeout);
+            shelfHideTimeout = setTimeout(() => {
+                shelf.classList.remove('shelf-revealed');
+            }, 2500);
+        }
+
+        shelfTriggerZone.addEventListener('mouseenter', revealShelfBriefly);
+        shelf.addEventListener('mouseenter', () => {
+            if (shelf.classList.contains('shelf-hidden')) {
+                if (shelfHideTimeout) clearTimeout(shelfHideTimeout);
+                shelf.classList.add('shelf-revealed');
+            }
+        });
+        shelf.addEventListener('mouseleave', () => {
+            if (shelf.classList.contains('shelf-hidden')) {
+                shelfHideTimeout = setTimeout(() => {
+                    shelf.classList.remove('shelf-revealed');
+                }, 1000);
+            }
+        });
+
+        const cursor = document.getElementById('custom-cursor');
+        window.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        });
+
+        const taskbar = document.getElementById('main-taskbar');
+        const menuTrigger = document.getElementById('menu-trigger');
+        const startMenu = document.getElementById('start-menu');
+
+        function openMenu() {
+            taskbar.classList.add('menu-toggled');
+            startMenu.classList.add('is-open');
+        }
+
+        function closeMenu() {
+            taskbar.classList.remove('menu-toggled');
+            startMenu.classList.remove('is-open');
+        }
+
+        menuTrigger.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            if (startMenu.classList.contains('is-open')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (startMenu.classList.contains('is-open')) {
+                const isClickInsideMenu = startMenu.contains(event.target);
+                const isClickOnTrigger = menuTrigger.contains(event.target);
+                if (!isClickInsideMenu && !isClickOnTrigger) {
+                    closeMenu();
+                }
+            }
+        });
+
+        function updateClock() {
+            const now = new Date();
+            const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            const timeStr = now.toLocaleTimeString([], timeOptions);
+            const shortTimeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+            
+            const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
+            const dateStr = now.toLocaleDateString([], dateOptions);
+
+            document.getElementById('clock-time').textContent = timeStr;
+            document.getElementById('clock-date').textContent = dateStr;
+            document.getElementById('aquafer-hub-clock').textContent = timeStr;
+            
+            document.getElementById('lock-time').textContent = shortTimeStr;
+            document.getElementById('lock-date').textContent = dateStr;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        const stickyNoteInput = document.getElementById('sticky-note-input');
+        const STORAGE_KEY = 'chainsos_sticky_note_content';
+
+        const savedNote = localStorage.getItem(STORAGE_KEY);
+        if (savedNote !== null) {
+            stickyNoteInput.value = savedNote;
+        }
+
+        stickyNoteInput.addEventListener('input', () => {
+            localStorage.setItem(STORAGE_KEY, stickyNoteInput.value);
+        });
+
+        /* DISKEY & FILE SYSTEM ENGINE */
+        const diskeyWindow = document.getElementById('diskey-window');
+        const aquaferWindow = document.getElementById('aquafer-window');
+        const calcWindow = document.getElementById('calcapp-window');
+        const calendarWindow = document.getElementById('calendar-window');
+        const contactsWindow = document.getElementById('contacts-window');
+        const diskeyIcon = document.getElementById('diskey-app-icon');
+        const startCalcItem = document.getElementById('start-calc-item');
+        const trashIcon = document.getElementById('trash-icon');
+        const trashWrapper = document.getElementById('trash-shelf-wrapper');
+        const diskeyContainer = document.getElementById('diskey-file-container');
+        const diskeyPathBar = document.getElementById('diskey-path');
+        const diskeyBackBtn = document.getElementById('diskey-back');
+        const diskeyNewFolderBtn = document.getElementById('diskey-new-folder');
+        const taskbarApps = document.getElementById('taskbar-apps');
+        const shelfIconsContainer = document.getElementById('shelf-icons-container');
+
+        const FS_STORAGE_KEY = 'chainsos_diskey_filesystem';
+        const SHELF_SHORTCUTS_KEY = 'chainsos_shelf_shortcuts';
+
+        const defaultFileSystem = {
+            "HD>": {
+                type: "folder",
+                contents: {
+                    "Documents": { type: "folder", isSystem: true, contents: {} },
+                    "Paintings": { type: "folder", isSystem: true, contents: {} },
+                    "Audio": { type: "folder", isSystem: true, contents: {} },
+                    "Aquafer": { type: "folder", isSystem: true, contents: {} },
+                    "Waste Bin": { type: "folder", isSystem: true, contents: {} }
+                }
+            }
+        };
+
+        let fileSystem = defaultFileSystem;
+        let shelfShortcuts = [];
+
+        function loadShelfShortcuts() {
+            try {
+                shelfShortcuts = JSON.parse(localStorage.getItem(SHELF_SHORTCUTS_KEY)) || [];
+            } catch(e) { shelfShortcuts = []; }
+            renderShelfShortcuts();
+        }
+
+        function saveShelfShortcuts() {
+            localStorage.setItem(SHELF_SHORTCUTS_KEY, JSON.stringify(shelfShortcuts));
+            renderShelfShortcuts();
+        }
+
+        function renderShelfShortcuts() {
+            const existingItems = shelfIconsContainer.querySelectorAll('.dynamic-shelf-item');
+            existingItems.forEach(el => el.remove());
+
+            shelfShortcuts.forEach((sc, index) => {
+                const itemEl = document.createElement('div');
+                itemEl.className = 'shelf-item dynamic-shelf-item';
+                itemEl.draggable = true;
+                
+                const img = document.createElement('img');
+                img.src = sc.icon || 'diskey.png';
+                img.alt = sc.name;
+                img.title = sc.name;
+
+                itemEl.appendChild(img);
+
+                itemEl.addEventListener('dragstart', (e) => {
+                    e.dataTransfer.setData('text/plain', JSON.stringify({
+                        source: 'shelf',
+                        index: index
+                    }));
+                });
+
+                itemEl.addEventListener('click', () => {
+                    if (sc.type === 'folder') {
+                        currentPath = [...sc.path, sc.name];
+                        openAppWindow(diskeyWindow, 'diskey', 'Diskey', 'diskey.png');
+                        renderDiskey();
+                    } else if (sc.name.endsWith('.aqu')) {
+                        openAppWindow(aquaferWindow, 'aquafer', 'Aquafer', 'aquafer.png');
+                        switchAquaferTab('wordpad');
+                        document.getElementById('aqu-file-name').value = sc.name.replace('.aqu', '');
+                        document.getElementById('aqu-file-content').value = sc.content || '';
+                    }
+                });
+
+                itemEl.addEventListener('dblclick', (e) => {
+                    e.stopPropagation();
+                    shelfShortcuts.splice(index, 1);
+                    saveShelfShortcuts();
+                });
+
+                shelfIconsContainer.insertBefore(itemEl, trashWrapper);
+            });
+        }
+
+        shelfIconsContainer.addEventListener('dragover', (e) => { e.preventDefault(); });
+        shelfIconsContainer.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const dataStr = e.dataTransfer.getData('text/plain');
+            if (!dataStr) return;
+            try {
+                const data = JSON.parse(dataStr);
+                if (data.source === 'diskey') {
+                    const currentFolder = getFolderFromPath(data.path);
+                    if (currentFolder && currentFolder[data.name]) {
+                        const item = currentFolder[data.name];
+                        shelfShortcuts.push({
+                            name: data.name,
+                            path: data.path,
+                            type: item.type,
+                            icon: item.type === 'folder' ? 'file folder.png' : (data.name.endsWith('.aqu') ? 'aquafer file.png' : 'diskey.png'),
+                            content: item.content || ''
+                        });
+                        saveShelfShortcuts();
+                    }
+                }
+            } catch(err) {}
+        });
+
+        function ensureDefaultFoldersExist(fs) {
+            if (!fs["HD>"] || !fs["HD>"].contents) {
+                fs["HD>"] = { type: "folder", contents: {} };
+            }
+            const defaults = ["Documents", "Paintings", "Audio", "Aquafer", "Waste Bin"];
+            defaults.forEach(folderName => {
+                if (!fs["HD>"].contents[folderName]) {
+                    fs["HD>"].contents[folderName] = {
+                        type: "folder",
+                        isSystem: true,
+                        contents: {}
+                    };
+                } else {
+                    fs["HD>"].contents[folderName].isSystem = true;
+                }
+            });
+        }
+
+        function loadFileSystem() {
+            const savedFS = localStorage.getItem(FS_STORAGE_KEY);
+            if (savedFS) {
+                try {
+                    fileSystem = JSON.parse(savedFS);
+                    ensureDefaultFoldersExist(fileSystem);
+                } catch (e) {
+                    fileSystem = defaultFileSystem;
+                }
+            } else {
+                fileSystem = defaultFileSystem;
+            }
+        }
+
+        function saveFileSystem() {
+            localStorage.setItem(FS_STORAGE_KEY, JSON.stringify(fileSystem));
+            updateTrashIconState();
+        }
+
+        loadFileSystem();
+        loadShelfShortcuts();
+        let currentPath = ["HD>"];
+
+        function getFolderFromPath(pathArr) {
+            let current = fileSystem;
+            for (let i = 0; i < pathArr.length; i++) {
+                if (current[pathArr[i]] && current[pathArr[i]].contents) {
+                    current = current[pathArr[i]].contents;
+                } else {
+                    return null;
+                }
+            }
+            return current;
+        }
+
+        function updateTrashIconState() {
+            const wasteBin = fileSystem["HD>"].contents["Waste Bin"];
+            if (wasteBin && wasteBin.contents && Object.keys(wasteBin.contents).length > 0) {
+                trashIcon.src = 'trash full.png';
+            } else {
+                trashIcon.src = 'trash empty.png';
+            }
+        }
+
+        function renderDiskey() {
+            diskeyPathBar.textContent = currentPath.join(" \\ ");
+            diskeyContainer.innerHTML = "";
+
+            const folderContents = getFolderFromPath(currentPath);
+            if (!folderContents) return;
+
+            Object.keys(folderContents).forEach(itemName => {
+                const item = folderContents[itemName];
+                const itemEl = document.createElement('div');
+                itemEl.className = 'file-item';
+                itemEl.draggable = true;
+
+                const img = document.createElement('img');
+                if (item.type === 'folder') {
+                    img.src = 'file folder.png';
+                } else if (itemName.endsWith('.aqu')) {
+                    img.src = 'aquafer file.png';
+                } else {
+                    img.src = item.icon || 'diskey.png';
+                }
+                
+                const title = document.createElement('span');
+                title.textContent = itemName;
+
+                itemEl.appendChild(img);
+                itemEl.appendChild(title);
+
+                if (item.isSystem) {
+                    const badge = document.createElement('div');
+                    badge.className = 'system-badge';
+                    badge.textContent = '🔒';
+                    itemEl.appendChild(badge);
+                }
+
+                itemEl.addEventListener('dragstart', (e) => {
+                    e.dataTransfer.setData('text/plain', JSON.stringify({
+                        source: 'diskey',
+                        name: itemName,
+                        path: [...currentPath],
+                        isSystem: item.isSystem
+                    }));
+                });
+
+                itemEl.addEventListener('dblclick', (e) => {
+                    e.stopPropagation();
+                    if (currentPath.length === 2 && currentPath[0] === 'HD>' && currentPath[1] === 'Waste Bin') {
+                        restoreItemFromWasteBin(itemName);
+                        return;
+                    }
+
+                    if (item.type === 'folder') {
+                        currentPath.push(itemName);
+                        renderDiskey();
+                    } else if (itemName.endsWith('.aqu')) {
+                        openAppWindow(aquaferWindow, 'aquafer', 'Aquafer', 'aquafer.png');
+                        switchAquaferTab('wordpad');
+                        document.getElementById('aqu-file-name').value = itemName.replace('.aqu', '');
+                        document.getElementById('aqu-file-content').value = item.content || '';
+                    } else {
+                        openAppWindow(aquaferWindow, 'aquafer', 'Aquafer', 'aquafer.png');
+                        switchAquaferTab('wordpad');
+                        document.getElementById('aqu-file-name').value = itemName;
+                        document.getElementById('aqu-file-content').value = item.content || JSON.stringify(item, null, 2);
+                    }
+                });
+
+                diskeyContainer.appendChild(itemEl);
+            });
+
+            updateTrashIconState();
+        }
+
+        function restoreItemFromWasteBin(itemName) {
+            const wasteBinContents = fileSystem["HD>"].contents["Waste Bin"].contents;
+            const itemToRestore = wasteBinContents[itemName];
+
+            if (!itemToRestore) return;
+
+            const targetPath = itemToRestore.originalPath || ["HD>"];
+            const targetFolder = getFolderFromPath(targetPath);
+
+            if (targetFolder) {
+                targetFolder[itemName] = itemToRestore;
+                delete targetFolder[itemName].originalPath;
+            } else {
+                fileSystem["HD>"].contents[itemName] = itemToRestore;
+                delete fileSystem["HD>"].contents[itemName].originalPath;
+            }
+
+            delete wasteBinContents[itemName];
+            saveFileSystem();
+            renderDiskey();
+        }
+
+        async function handleTrashClick() {
+            const wasteBinContents = fileSystem["HD>"].contents["Waste Bin"].contents;
+            if (wasteBinContents && Object.keys(wasteBinContents).length > 0) {
+                const confirmed = await osConfirm("Permanently delete all items in the Waste Bin?", "Empty Trash");
+                if (confirmed) {
+                    fileSystem["HD>"].contents["Waste Bin"].contents = {};
+                    saveFileSystem();
+                    renderDiskey();
+                }
+            }
+        }
+
+        trashIcon.addEventListener('click', handleTrashClick);
+        trashIcon.addEventListener('dblclick', (e) => {
+            e.stopPropagation();
+            handleTrashClick();
+        });
+
+        trashWrapper.addEventListener('dragover', (e) => { e.preventDefault(); });
+
+        trashWrapper.addEventListener('drop', async (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const dataStr = e.dataTransfer.getData('text/plain');
+            if (!dataStr) return;
+
+            const data = JSON.parse(dataStr);
+
+            if (data.source === 'shelf') {
+                shelfShortcuts.splice(data.index, 1);
+                saveShelfShortcuts();
+                return;
+            }
+
+            if (data.source === 'diskey') {
+                if (data.isSystem) {
+                    await osAlert("Default system folders cannot be moved to the trash.", "Access Denied");
+                    return;
+                }
+
+                const currentFolder = getFolderFromPath(data.path);
+                if (currentFolder && currentFolder[data.name]) {
+                    const itemToMove = currentFolder[data.name];
+                    itemToMove.originalPath = [...data.path];
+
+                    fileSystem["HD>"].contents["Waste Bin"].contents[data.name] = itemToMove;
+                    delete currentFolder[data.name];
+
+                    saveFileSystem();
+                    renderDiskey();
+                }
+            }
+        });
+
+        /* WINDOW STACKING (BRING TO FRONT ON CLICK) */
+        let highestZIndex = 999500;
+
+        function bringWindowToFront(winEl) {
+            highestZIndex++;
+            winEl.style.zIndex = highestZIndex;
+        }
+
+        /* PINNED APPS ENGINE */
+        const PINNED_APPS_KEY = 'chainsos_pinned_taskbar_apps';
+        let pinnedApps = [];
+
+        try {
+            pinnedApps = JSON.parse(localStorage.getItem(PINNED_APPS_KEY)) || [];
+        } catch(e) { pinnedApps = []; }
+
+        function savePinnedApps() {
+            localStorage.setItem(PINNED_APPS_KEY, JSON.stringify(pinnedApps));
+        }
+
+        function togglePinApp(id, name, iconSrc) {
+            const index = pinnedApps.findIndex(p => p.id === id);
+            if (index > -1) {
+                pinnedApps.splice(index, 1);
+            } else {
+                pinnedApps.push({ id, name, iconSrc });
+            }
+            savePinnedApps();
+            renderTaskbarApps();
+        }
+
+        function renderTaskbarApps() {
+            taskbarApps.innerHTML = "";
+
+            const openWindows = Array.from(document.querySelectorAll('.os-window')).filter(w => w.classList.contains('is-open') || w.classList.contains('is-minimizing'));
+            const appMap = new Map();
+
+            pinnedApps.forEach(app => appMap.set(app.id, { ...app, isPinned: true }));
+
+            openWindows.forEach(win => {
+                const id = win.id.replace('-window', '');
+                let name = id.charAt(0).toUpperCase() + id.slice(1);
+                let iconSrc = `${id}.png`;
+                if (id === 'aquafer') name = 'Aquafer';
+                if (id === 'diskey') name = 'Diskey';
+                if (id === 'calcapp') { name = 'Calculator'; iconSrc = 'cauculater.png'; }
+
+                if (appMap.has(id)) {
+                    appMap.get(id).isOpen = true;
+                } else {
+                    appMap.set(id, { id, name, iconSrc, isPinned: false, isOpen: true });
+                }
+            });
+
+            appMap.forEach((app) => {
+                const item = document.createElement('div');
+                item.className = `taskbar-app-item ${app.isPinned ? 'pinned' : ''}`;
+                item.id = `taskbar-item-${app.id}`;
+
+                const img = document.createElement('img');
+                img.src = app.iconSrc;
+
+                const label = document.createElement('span');
+                label.textContent = app.name;
+
+                item.appendChild(img);
+                item.appendChild(label);
+
+                item.addEventListener('click', (e) => {
+                    const win = document.getElementById(`${app.id}-window`);
+                    if (win) {
+                        toggleWindow(win, app.id, app.name, app.iconSrc);
+                    }
+                });
+
+                item.addEventListener('dblclick', (e) => {
+                    e.stopPropagation();
+                    togglePinApp(app.id, app.name, app.iconSrc);
+                });
+
+                taskbarApps.appendChild(item);
+            });
+        }
+
+        function openAppWindow(winEl, id, name, iconSrc) {
+            winEl.classList.remove('is-minimizing');
+            winEl.classList.add('is-open');
+            bringWindowToFront(winEl);
+            renderTaskbarApps();
+            updateShelfVisibilityState();
+        }
+
+        function minimizeAppWindow(winEl) {
+            winEl.classList.add('is-minimizing');
+            winEl.classList.remove('is-open');
+            updateShelfVisibilityState();
+        }
+
+        function toggleWindow(winEl, id, name, iconSrc) {
+            if (winEl.classList.contains('is-minimizing')) {
+                winEl.classList.remove('is-minimizing');
+                winEl.classList.add('is-open');
+                bringWindowToFront(winEl);
+            } else if (winEl.classList.contains('is-open')) {
+                if (parseInt(winEl.style.zIndex || 0) === highestZIndex) {
+                    minimizeAppWindow(winEl);
+                } else {
+                    bringWindowToFront(winEl);
+                }
+            } else {
+                openAppWindow(winEl, id, name, iconSrc);
+            }
+            updateShelfVisibilityState();
+        }
+
+        function closeAppWindow(winEl, id) {
+            winEl.classList.remove('is-open', 'is-minimizing', 'is-maximized');
+            renderTaskbarApps();
+            updateShelfVisibilityState();
+        }
+
+        diskeyIcon.addEventListener('click', () => {
+            currentPath = ["HD>"];
+            openAppWindow(diskeyWindow, 'diskey', 'Diskey', 'diskey.png');
+            renderDiskey();
+        });
+
+        diskeyBackBtn.addEventListener('click', () => {
+            if (currentPath.length > 1) {
+                currentPath.pop();
+                renderDiskey();
+            }
+        });
+
+        diskeyNewFolderBtn.addEventListener('click', async () => {
+            const folderName = await osPrompt("Enter a name for the new folder:", "", "New Folder");
+            if (!folderName || !folderName.trim()) return;
+
+            const currentFolder = getFolderFromPath(currentPath);
+            if (currentFolder && !currentFolder[folderName]) {
+                currentFolder[folderName] = { type: "folder", contents: {} };
+                saveFileSystem();
+                renderDiskey();
+            }
+        });
+
+        startCalcItem.addEventListener('click', () => {
+            closeMenu();
+            openAppWindow(calcWindow, 'calcapp', 'Calculator', 'cauculater.png');
+        });
+
+        document.getElementById('start-aquafer-item').addEventListener('click', () => {
+            closeMenu();
+            openAppWindow(aquaferWindow, 'aquafer', 'Aquafer', 'aquafer.png');
+        });
+
+        document.getElementById('start-diskey-item').addEventListener('click', () => {
+            closeMenu();
+            currentPath = ["HD>"];
+            openAppWindow(diskeyWindow, 'diskey', 'Diskey', 'diskey.png');
+            renderDiskey();
+        });
+
+        document.getElementById('start-calendar-item').addEventListener('click', () => {
+            closeMenu();
+            openAppWindow(calendarWindow, 'calendar', 'Calendar', 'calendar.png');
+            renderCalendarApp();
+        });
+
+        document.getElementById('start-contacts-item').addEventListener('click', () => {
+            closeMenu();
+            openAppWindow(contactsWindow, 'contacts', 'Contacts', 'contacts.png');
+            renderContacts();
+        });
+
+        document.getElementById('btn-minimize-diskey').addEventListener('click', (e) => { e.stopPropagation(); minimizeAppWindow(diskeyWindow); });
+        document.getElementById('btn-maximize-diskey').addEventListener('click', (e) => { e.stopPropagation(); diskeyWindow.classList.toggle('is-maximized'); updateShelfVisibilityState(); });
+        document.getElementById('btn-close-diskey').addEventListener('click', (e) => { e.stopPropagation(); closeAppWindow(diskeyWindow, 'diskey'); });
+
+        document.getElementById('btn-minimize-aquafer').addEventListener('click', (e) => { e.stopPropagation(); minimizeAppWindow(aquaferWindow); });
+        document.getElementById('btn-maximize-aquafer').addEventListener('click', (e) => { e.stopPropagation(); aquaferWindow.classList.toggle('is-maximized'); updateShelfVisibilityState(); });
+        document.getElementById('btn-close-aquafer').addEventListener('click', (e) => { e.stopPropagation(); closeAppWindow(aquaferWindow, 'aquafer'); });
+
+        document.getElementById('btn-minimize-calc').addEventListener('click', (e) => { e.stopPropagation(); minimizeAppWindow(calcWindow); });
+        document.getElementById('btn-maximize-calc').addEventListener('click', (e) => { e.stopPropagation(); calcWindow.classList.toggle('is-maximized'); updateShelfVisibilityState(); });
+        document.getElementById('btn-close-calc').addEventListener('click', (e) => { e.stopPropagation(); closeAppWindow(calcWindow, 'calcapp'); });
+
+        document.getElementById('btn-minimize-calendar').addEventListener('click', (e) => { e.stopPropagation(); minimizeAppWindow(calendarWindow); });
+        document.getElementById('btn-maximize-calendar').addEventListener('click', (e) => { e.stopPropagation(); calendarWindow.classList.toggle('is-maximized'); updateShelfVisibilityState(); });
+        document.getElementById('btn-close-calendar').addEventListener('click', (e) => { e.stopPropagation(); closeAppWindow(calendarWindow, 'calendar'); });
+
+        document.getElementById('btn-minimize-contacts').addEventListener('click', (e) => { e.stopPropagation(); minimizeAppWindow(contactsWindow); });
+        document.getElementById('btn-maximize-contacts').addEventListener('click', (e) => { e.stopPropagation(); contactsWindow.classList.toggle('is-maximized'); updateShelfVisibilityState(); });
+        document.getElementById('btn-close-contacts').addEventListener('click', (e) => { e.stopPropagation(); closeAppWindow(contactsWindow, 'contacts'); });
+
+        /* CALCULATOR LOGIC - REBUILT */
+        let calcDisplayValue = '0';
+        let calcFirstOperand = null;
+        let calcWaitingForSecondOperand = false;
+        let calcOperator = null;
+
+        const calcDisplay = document.getElementById('calc-display');
+
+        function updateCalcDisplay() {
+            calcDisplay.textContent = calcDisplayValue;
+        }
+
+        function calcInputDigit(digit) {
+            if (calcWaitingForSecondOperand) {
+                calcDisplayValue = digit;
+                calcWaitingForSecondOperand = false;
+            } else {
+                calcDisplayValue = calcDisplayValue === '0' ? digit : calcDisplayValue + digit;
+            }
+            updateCalcDisplay();
+        }
+
+        function calcInputDecimal() {
+            if (calcWaitingForSecondOperand) {
+                calcDisplayValue = '0.';
+                calcWaitingForSecondOperand = false;
+                updateCalcDisplay();
+                return;
+            }
+            if (!calcDisplayValue.includes('.')) {
+                calcDisplayValue += '.';
+                updateCalcDisplay();
+            }
+        }
+
+        function calcHandleOperator(nextOperator) {
+            const inputValue = parseFloat(calcDisplayValue);
+
+            if (calcOperator && calcWaitingForSecondOperand) {
+                calcOperator = nextOperator;
+                return;
+            }
+
+            if (calcFirstOperand === null && !isNaN(inputValue)) {
+                calcFirstOperand = inputValue;
+            } else if (calcOperator) {
+                const result = performCalculation(calcFirstOperand, inputValue, calcOperator);
+                calcDisplayValue = `${parseFloat(result.toFixed(7))}`;
+                calcFirstOperand = result;
+                updateCalcDisplay();
+            }
+
+            calcWaitingForSecondOperand = true;
+            calcOperator = nextOperator;
+        }
+
+        function calcEquals() {
+            const inputValue = parseFloat(calcDisplayValue);
+
+            if (calcOperator && calcFirstOperand !== null && !calcWaitingForSecondOperand) {
+                const result = performCalculation(calcFirstOperand, inputValue, calcOperator);
+                calcDisplayValue = `${parseFloat(result.toFixed(7))}`;
+                calcFirstOperand = null;
+                calcOperator = null;
+                calcWaitingForSecondOperand = true;
+                updateCalcDisplay();
+            }
+        }
+
+        function calcClear() {
+            calcDisplayValue = '0';
+            calcFirstOperand = null;
+            calcWaitingForSecondOperand = false;
+            calcOperator = null;
+            updateCalcDisplay();
+        }
+
+        function calcToggleSign() {
+            const value = parseFloat(calcDisplayValue);
+            calcDisplayValue = `${-value}`;
+            updateCalcDisplay();
+        }
+
+        function calcPercent() {
+            const value = parseFloat(calcDisplayValue);
+            calcDisplayValue = `${value / 100}`;
+            updateCalcDisplay();
+        }
+
+        function performCalculation(first, second, operator) {
+            if (operator === '+') return first + second;
+            if (operator === '-') return first - second;
+            if (operator === '*') return first * second;
+            if (operator === '/') return second === 0 ? 0 : first / second;
+            return second;
+        }
+
+        document.getElementById('calc-grid').addEventListener('click', (e) => {
+            const btn = e.target.closest('.calc-btn');
+            if (!btn) return;
+
+            const action = btn.getAttribute('data-action');
+            const val = btn.getAttribute('data-val');
+
+            switch (action) {
+                case 'digit':
+                    calcInputDigit(val);
+                    break;
+                case 'decimal':
+                    calcInputDecimal();
+                    break;
+                case 'operator':
+                    calcHandleOperator(val);
+                    break;
+                case 'calculate':
+                    calcEquals();
+                    break;
+                case 'clear':
+                    calcClear();
+                    break;
+                case 'sign':
+                    calcToggleSign();
+                    break;
+                case 'percent':
+                    calcPercent();
+                    break;
+            }
+        });
+
+        function setupWindowBehaviors(winEl, titlebarEl) {
+            winEl.addEventListener('mousedown', () => {
+                bringWindowToFront(winEl);
+            });
+
+            let isDragging = false;
+            let winOffsetX = 0, winOffsetY = 0;
+
+            titlebarEl.addEventListener('mousedown', (e) => {
+                if (e.target.classList.contains('window-control-btn')) return;
+                if (winEl.classList.contains('is-maximized')) return;
+                isDragging = true;
+                winOffsetX = e.clientX - winEl.offsetLeft;
+                winOffsetY = e.clientY - winEl.offsetTop;
+            });
+
+            let isResizing = false;
+            let currentResizer = null;
+            let origW = 0, origH = 0, origX = 0, origY = 0, origMouseX = 0, origMouseY = 0;
+
+            winEl.querySelectorAll('.resizer').forEach(resizer => {
+                resizer.addEventListener('mousedown', (e) => {
+                    e.stopPropagation();
+                    if (winEl.classList.contains('is-maximized')) return;
+                    isResizing = true;
+                    currentResizer = resizer;
+                    origW = winEl.offsetWidth;
+                    origH = winEl.offsetHeight;
+                    origX = winEl.offsetLeft;
+                    origY = winEl.offsetTop;
+                    origMouseX = e.clientX;
+                    origMouseY = e.clientY;
+                });
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    let targetX = e.clientX - winOffsetX;
+                    let targetY = e.clientY - winOffsetY;
+                    const maxAllowedX = window.innerWidth - 280 - winEl.offsetWidth;
+                    const maxAllowedY = window.innerHeight - 42 - winEl.offsetHeight;
+
+                    if (targetX < 0) targetX = 0;
+                    if (targetX > maxAllowedX) targetX = Math.max(0, maxAllowedX);
+                    if (targetY < 0) targetY = 0;
+                    if (targetY > maxAllowedY) targetY = Math.max(0, maxAllowedY);
+
+                    winEl.style.left = `${targetX}px`;
+                    winEl.style.top = `${targetY}px`;
+                }
+
+                if (isResizing && currentResizer) {
+                    const dx = e.clientX - origMouseX;
+                    const dy = e.clientY - origMouseY;
+                    const className = currentResizer.className;
+
+                    if (className.includes('right')) {
+                        winEl.style.width = `${Math.max(320, origW + dx)}px`;
+                    }
+                    if (className.includes('bottom')) {
+                        winEl.style.height = `${Math.max(220, origH + dy)}px`;
+                    }
+                    if (className.includes('left')) {
+                        const newW = origW - dx;
+                        if (newW >= 320) {
+                            winEl.style.width = `${newW}px`;
+                            winEl.style.left = `${origX + dx}px`;
+                        }
+                    }
+                    if (className.includes('top')) {
+                        const newH = origH - dy;
+                        if (newH >= 220) {
+                            winEl.style.height = `${newH}px`;
+                            winEl.style.top = `${origY + dy}px`;
+                        }
+                    }
+                }
+            });
+
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+                isResizing = false;
+                currentResizer = null;
+            });
+        }
+
+        setupWindowBehaviors(diskeyWindow, document.getElementById('diskey-titlebar'));
+        setupWindowBehaviors(aquaferWindow, document.getElementById('aquafer-titlebar'));
+        setupWindowBehaviors(calcWindow, document.getElementById('calcapp-titlebar'));
+
+        /* AQUAFER APP TABS & LOGIC */
+        const aquaferTabs = document.querySelectorAll('.aquafer-tab');
+        const aquaferPanels = document.querySelectorAll('.aquafer-panel');
+
+        function switchAquaferTab(tabId) {
+            aquaferTabs.forEach(t => {
+                if (t.getAttribute('data-tab') === tabId) {
+                    t.classList.add('active');
+                } else {
+                    t.classList.remove('active');
+                }
+            });
+            aquaferPanels.forEach(p => {
+                if (p.id === `panel-${tabId}`) {
+                    p.classList.add('active');
+                } else {
+                    p.classList.remove('active');
+                }
+            });
+            if (tabId === 'calendar') renderCalendar();
+            if (tabId === 'collab') renderCollabBoard();
+        }
+
+        aquaferTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                switchAquaferTab(tab.getAttribute('data-tab'));
+            });
+        });
+
+        document.getElementById('hub-launch-diskey').addEventListener('click', () => {
+            currentPath = ["HD>"];
+            openAppWindow(diskeyWindow, 'diskey', 'Diskey', 'diskey.png');
+            renderDiskey();
+        });
+
+        /* AQUAFER HUB QUICK LAUNCH ENGINE */
+        const HUB_QUICKLAUNCH_KEY = 'chainsos_aquafer_quicklaunch';
+        const availableQuickLaunchApps = [
+            { id: 'diskey', name: 'Diskey Explorer', icon: 'diskey.png' },
+            { id: 'calcapp', name: 'Calculator', icon: 'cauculater.png' },
+            { id: 'aquafer', name: 'Aquafer', icon: 'aquafer.png' },
+            { id: 'calendar', name: 'Calendar', icon: 'calendar.png' },
+            { id: 'contacts', name: 'Contacts', icon: 'contacts.png' }
+        ];
+
+        let hubQuickLaunch = [];
+        try {
+            hubQuickLaunch = JSON.parse(localStorage.getItem(HUB_QUICKLAUNCH_KEY)) || [];
+        } catch(e) { hubQuickLaunch = []; }
+
+        function saveHubQuickLaunch() {
+            localStorage.setItem(HUB_QUICKLAUNCH_KEY, JSON.stringify(hubQuickLaunch));
+        }
+
+        function launchQuickLaunchApp(appId) {
+            if (appId === 'diskey') {
+                currentPath = ["HD>"];
+                openAppWindow(diskeyWindow, 'diskey', 'Diskey', 'diskey.png');
+                renderDiskey();
+            } else if (appId === 'calcapp') {
+                openAppWindow(calcWindow, 'calcapp', 'Calculator', 'cauculater.png');
+            } else if (appId === 'aquafer') {
+                openAppWindow(aquaferWindow, 'aquafer', 'Aquafer', 'aquafer.png');
+            } else if (appId === 'calendar') {
+                openAppWindow(calendarWindow, 'calendar', 'Calendar', 'calendar.png');
+                renderCalendarApp();
+            } else if (appId === 'contacts') {
+                openAppWindow(contactsWindow, 'contacts', 'Contacts', 'contacts.png');
+                renderContacts();
+            }
+        }
+
+        function renderHubQuickLaunchSelect() {
+            const select = document.getElementById('hub-quicklaunch-select');
+            select.innerHTML = "";
+            availableQuickLaunchApps.forEach(app => {
+                const opt = document.createElement('option');
+                opt.value = app.id;
+                opt.textContent = app.name;
+                select.appendChild(opt);
+            });
+        }
+
+        function renderHubQuickLaunch() {
+            const grid = document.getElementById('hub-quicklaunch-grid');
+            grid.innerHTML = "";
+            hubQuickLaunch.forEach((appId, index) => {
+                const app = availableQuickLaunchApps.find(a => a.id === appId);
+                if (!app) return;
+
+                const btn = document.createElement('button');
+                btn.className = 'aquafer-btn';
+                btn.title = 'Double-click to remove';
+
+                const img = document.createElement('img');
+                img.src = app.icon;
+                img.style.width = '20px';
+                img.style.height = '20px';
+
+                btn.appendChild(img);
+                btn.appendChild(document.createTextNode(` ${app.name}`));
+
+                btn.addEventListener('click', () => launchQuickLaunchApp(app.id));
+                btn.addEventListener('dblclick', (e) => {
+                    e.stopPropagation();
+                    hubQuickLaunch.splice(index, 1);
+                    saveHubQuickLaunch();
+                    renderHubQuickLaunch();
+                });
+
+                grid.appendChild(btn);
+            });
+        }
+
+        document.getElementById('hub-add-quicklaunch').addEventListener('click', () => {
+            const select = document.getElementById('hub-quicklaunch-select');
+            const appId = select.value;
+            if (!appId) return;
+            if (hubQuickLaunch.includes(appId)) return;
+            hubQuickLaunch.push(appId);
+            saveHubQuickLaunch();
+            renderHubQuickLaunch();
+        });
+
+        renderHubQuickLaunchSelect();
+        renderHubQuickLaunch();
+
+        document.getElementById('btn-save-aqu').addEventListener('click', () => {
+            const fileNameInput = document.getElementById('aqu-file-name');
+            const fileContentInput = document.getElementById('aqu-file-content');
+
+            let name = fileNameInput.value.trim();
+            if (!name) {
+                osAlert("Please enter a valid file name.", "Save Error");
+                return;
+            }
+            if (!name.endsWith('.aqu')) name += '.aqu';
+
+            const content = fileContentInput.value;
+            const aquaferFolder = fileSystem["HD>"].contents["Aquafer"].contents;
+
+            aquaferFolder[name] = {
+                type: "file",
+                content: content,
+                icon: "aquafer file.png"
+            };
+
+            saveFileSystem();
+            osAlert(`Successfully saved '${name}' to HD> \\ Aquafer`, "File Saved");
+        });
+
+        document.getElementById('btn-open-from-diskey').addEventListener('click', () => {
+            currentPath = ["HD>", "Aquafer"];
+            openAppWindow(diskeyWindow, 'diskey', 'Diskey', 'diskey.png');
+            renderDiskey();
+        });
+
+        /* CALENDAR TAB ENGINE */
+        let calendarEvents = {};
+        const CALENDAR_EVENTS_KEY = 'chainsos_calendar_events';
+
+        try {
+            calendarEvents = JSON.parse(localStorage.getItem(CALENDAR_EVENTS_KEY)) || {};
+        } catch(e) { calendarEvents = {}; }
+
+        function saveCalendarEvents() {
+            localStorage.setItem(CALENDAR_EVENTS_KEY, JSON.stringify(calendarEvents));
+        }
+
+        function renderCalendar() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth();
+            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            
+            document.getElementById('calendar-month-title').textContent = `${monthNames[month]} ${year}`;
+
+            const daysGrid = document.getElementById('calendar-days-grid');
+            daysGrid.innerHTML = "";
+
+            const firstDayIndex = new Date(year, month, 1).getDay();
+            const totalDays = new Date(year, month + 1, 0).getDate();
+
+            for (let i = 0; i < firstDayIndex; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'calendar-day';
+                emptyCell.style.opacity = '0.3';
+                daysGrid.appendChild(emptyCell);
+            }
+
+            for (let day = 1; day <= totalDays; day++) {
+                const dayCell = document.createElement('div');
+                dayCell.className = 'calendar-day';
+                
+                const dayNum = document.createElement('div');
+                dayNum.style.fontWeight = 'bold';
+                dayNum.textContent = day;
+                dayCell.appendChild(dayNum);
+
+                const dateKey = `${year}-${month + 1}-${day}`;
+                if (calendarEvents[dateKey]) {
+                    dayCell.classList.add('has-event');
+                    const evText = document.createElement('div');
+                    evText.style.fontSize = '0.65rem';
+                    evText.style.marginTop = '2px';
+                    evText.style.wordBreak = 'break-word';
+                    evText.textContent = calendarEvents[dateKey];
+                    dayCell.appendChild(evText);
+                }
+
+                daysGrid.appendChild(dayCell);
+            }
+        }
+
+        document.getElementById('btn-add-event').addEventListener('click', () => {
+            const dayInput = document.getElementById('calendar-day-input').value;
+            const eventInput = document.getElementById('calendar-event-input').value.trim();
+
+            if (!dayInput || !eventInput) {
+                osAlert("Please specify a day number and event description.", "Calendar Error");
+                return;
+            }
+
+            const now = new Date();
+            const dateKey = `${now.getFullYear()}-${now.getMonth() + 1}-${dayInput}`;
+            calendarEvents[dateKey] = eventInput;
+            saveCalendarEvents();
+            renderCalendar();
+            document.getElementById('calendar-event-input').value = "";
+            document.getElementById('calendar-day-input').value = "";
+        });
+
+        document.getElementById('btn-export-calendar-aqu').addEventListener('click', () => {
+            const content = JSON.stringify(calendarEvents, null, 2);
+            fileSystem["HD>"].contents["Aquafer"].contents["Calendar_Export.aqu"] = {
+                type: "file",
+                content: content,
+                icon: "aquafer file.png"
+            };
+            saveFileSystem();
+            osAlert("Calendar exported successfully to HD> \\ Aquafer as Calendar_Export.aqu", "Export Complete");
+        });
+
+        /* COLLAB BOARD ENGINE */
+        let collabNotes = [];
+        const COLLAB_NOTES_KEY = 'chainsos_collab_notes';
+
+        try {
+            collabNotes = JSON.parse(localStorage.getItem(COLLAB_NOTES_KEY)) || [
+                { author: "System", text: "Welcome to the ChainsOS Public Collab Board!" },
+                { author: "User", text: "Working on system stability and new visual themes." }
+            ];
+        } catch(e) { collabNotes = []; }
+
+        function saveCollabNotes() {
+            localStorage.setItem(COLLAB_NOTES_KEY, JSON.stringify(collabNotes));
+        }
+
+        function renderCollabBoard() {
+            const grid = document.getElementById('collab-board-grid');
+            grid.innerHTML = "";
+
+            collabNotes.forEach((note, index) => {
+                const card = document.createElement('div');
+                card.className = 'collab-note';
+
+                const textDiv = document.createElement('div');
+                textDiv.textContent = note.text;
+
+                const authorDiv = document.createElement('div');
+                authorDiv.style.fontSize = '0.7rem';
+                authorDiv.style.fontWeight = 'bold';
+                authorDiv.style.textAlign = 'right';
+                authorDiv.style.color = '#25587a';
+                authorDiv.textContent = `— ${note.author}`;
+
+                card.appendChild(textDiv);
+                card.appendChild(authorDiv);
+                grid.appendChild(card);
+            });
+        }
+
+        document.getElementById('btn-post-collab').addEventListener('click', () => {
+            const input = document.getElementById('collab-note-input');
+            const val = input.value.trim();
+            if (!val) return;
+
+            collabNotes.unshift({ author: "User", text: val });
+            saveCollabNotes();
+            renderCollabBoard();
+            input.value = "";
+        });
+
+        document.getElementById('btn-export-collab-aqu').addEventListener('click', () => {
+            const content = collabNotes.map(n => `[${n.author}]: ${n.text}`).join('\n\n');
+            fileSystem["HD>"].contents["Aquafer"].contents["CollabBoard_Export.aqu"] = {
+                type: "file",
+                content: content,
+                icon: "aquafer file.png"
+            };
+            saveFileSystem();
+            osAlert("Collab Board exported successfully to HD> \\ Aquafer as CollabBoard_Export.aqu", "Export Complete");
+        });
+
+        /* CALENDAR APP ENGINE (standalone Calendar app) */
+        let calendarAppEvents = {};
+        const CALENDARAPP_EVENTS_KEY = 'chainsos_calendarapp_events';
+
+        try {
+            calendarAppEvents = JSON.parse(localStorage.getItem(CALENDARAPP_EVENTS_KEY)) || {};
+        } catch(e) { calendarAppEvents = {}; }
+
+        function saveCalendarAppEvents() {
+            localStorage.setItem(CALENDARAPP_EVENTS_KEY, JSON.stringify(calendarAppEvents));
+        }
+
+        function renderCalendarApp() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth();
+            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            document.getElementById('calendarapp-month-title').textContent = `${monthNames[month]} ${year}`;
+
+            const daysGrid = document.getElementById('calendarapp-days-grid');
+            daysGrid.innerHTML = "";
+
+            const firstDayIndex = new Date(year, month, 1).getDay();
+            const totalDays = new Date(year, month + 1, 0).getDate();
+
+            for (let i = 0; i < firstDayIndex; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'calendar-day';
+                emptyCell.style.opacity = '0.3';
+                daysGrid.appendChild(emptyCell);
+            }
+
+            for (let day = 1; day <= totalDays; day++) {
+                const dayCell = document.createElement('div');
+                dayCell.className = 'calendar-day';
+
+                const dayNum = document.createElement('div');
+                dayNum.style.fontWeight = 'bold';
+                dayNum.textContent = day;
+                dayCell.appendChild(dayNum);
+
+                const dateKey = `${year}-${month + 1}-${day}`;
+                if (calendarAppEvents[dateKey]) {
+                    dayCell.classList.add('has-event');
+                    const evText = document.createElement('div');
+                    evText.style.fontSize = '0.65rem';
+                    evText.style.marginTop = '2px';
+                    evText.style.wordBreak = 'break-word';
+                    evText.textContent = calendarAppEvents[dateKey];
+                    dayCell.appendChild(evText);
+                }
+
+                daysGrid.appendChild(dayCell);
+            }
+        }
+
+        document.getElementById('btn-add-event-calendarapp').addEventListener('click', () => {
+            const dayInput = document.getElementById('calendarapp-day-input').value;
+            const eventInput = document.getElementById('calendarapp-event-input').value.trim();
+
+            if (!dayInput || !eventInput) {
+                osAlert("Please specify a day number and event description.", "Calendar Error");
+                return;
+            }
+
+            const now = new Date();
+            const dateKey = `${now.getFullYear()}-${now.getMonth() + 1}-${dayInput}`;
+            calendarAppEvents[dateKey] = eventInput;
+            saveCalendarAppEvents();
+            renderCalendarApp();
+            document.getElementById('calendarapp-event-input').value = "";
+            document.getElementById('calendarapp-day-input').value = "";
+        });
+
+        setupWindowBehaviors(calendarWindow, document.getElementById('calendar-titlebar'));
+        renderCalendarApp();
+
+        /* CONTACTS APP ENGINE */
+        let contactsList = [];
+        const CONTACTS_KEY = 'chainsos_contacts';
+
+        try {
+            contactsList = JSON.parse(localStorage.getItem(CONTACTS_KEY)) || [];
+        } catch(e) { contactsList = []; }
+
+        function saveContacts() {
+            localStorage.setItem(CONTACTS_KEY, JSON.stringify(contactsList));
+        }
+
+        function renderContacts() {
+            const list = document.getElementById('contacts-list');
+            list.innerHTML = "";
+
+            if (contactsList.length === 0) {
+                list.innerHTML = '<p style="color: #4a7796; font-style: italic;">No contacts yet. Add one above.</p>';
+                return;
+            }
+
+            contactsList.forEach((contact, index) => {
+                const card = document.createElement('div');
+                card.className = 'aquafer-card';
+                card.style.marginBottom = '8px';
+
+                const nameRow = document.createElement('div');
+                nameRow.style.display = 'flex';
+                nameRow.style.justifyContent = 'space-between';
+                nameRow.style.alignItems = 'center';
+
+                const nameEl = document.createElement('h4');
+                nameEl.style.color = '#10344d';
+                nameEl.textContent = contact.name;
+
+                const btnGroup = document.createElement('div');
+                btnGroup.style.display = 'flex';
+                btnGroup.style.gap = '6px';
+
+                const editBtn = document.createElement('button');
+                editBtn.className = 'aquafer-btn';
+                editBtn.textContent = 'Edit';
+                editBtn.addEventListener('click', () => {
+                    document.getElementById('contact-name-input').value = contact.name;
+                    document.getElementById('contact-email-input').value = contact.email;
+                    document.getElementById('contact-phone-input').value = contact.phone;
+                    contactsList.splice(index, 1);
+                    saveContacts();
+                    renderContacts();
+                });
+
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'aquafer-btn';
+                removeBtn.textContent = 'Remove';
+                removeBtn.addEventListener('click', async () => {
+                    const confirmed = await osConfirm(`Are you sure you want to delete '${contact.name}'?`, "Delete Contact");
+                    if (confirmed) {
+                        contactsList.splice(index, 1);
+                        saveContacts();
+                        renderContacts();
+                    }
+                });
+
+                btnGroup.appendChild(editBtn);
+                btnGroup.appendChild(removeBtn);
+                nameRow.appendChild(nameEl);
+                nameRow.appendChild(btnGroup);
+
+                const emailP = document.createElement('p');
+                emailP.style.fontSize = '0.85rem';
+                emailP.style.color = '#3a698a';
+                emailP.textContent = contact.email || '(no email)';
+
+                const phoneP = document.createElement('p');
+                phoneP.style.fontSize = '0.85rem';
+                phoneP.style.color = '#3a698a';
+                phoneP.textContent = contact.phone || '(no phone)';
+
+                card.appendChild(nameRow);
+                card.appendChild(emailP);
+                card.appendChild(phoneP);
+                list.appendChild(card);
+            });
+        }
+
+        document.getElementById('btn-add-contact').addEventListener('click', () => {
+            const nameInput = document.getElementById('contact-name-input');
+            const emailInput = document.getElementById('contact-email-input');
+            const phoneInput = document.getElementById('contact-phone-input');
+
+            const name = nameInput.value.trim();
+            if (!name) {
+                osAlert("Please enter a name for the contact.", "Contact Error");
+                return;
+            }
+
+            contactsList.push({
+                name: name,
+                email: emailInput.value.trim(),
+                phone: phoneInput.value.trim()
+            });
+            saveContacts();
+            renderContacts();
+
+            nameInput.value = "";
+            emailInput.value = "";
+            phoneInput.value = "";
+        });
+
+        setupWindowBehaviors(contactsWindow, document.getElementById('contacts-titlebar'));
+        renderContacts();
+
+        /* SEARCH & PREVIEW ENGINE */
+        document.getElementById('btn-run-search').addEventListener('click', runAquaferSearch);
+        document.getElementById('aquafer-search-input').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') runAquaferSearch();
+        });
+
+        function runAquaferSearch() {
+            const query = document.getElementById('aquafer-search-input').value.toLowerCase().trim();
+            const resultsContainer = document.getElementById('aquafer-search-results');
+            resultsContainer.innerHTML = "";
+
+            if (!query) {
+                resultsContainer.innerHTML = '<p style="color: #4a7796; font-style: italic;">Please enter a search term...</p>';
+                return;
+            }
+
+            const matches = [];
+            function searchFolder(folderObj, pathStr) {
+                if (!folderObj || !folderObj.contents) return;
+                Object.keys(folderObj.contents).forEach(name => {
+                    const item = folderObj.contents[name];
+                    if (name.toLowerCase().includes(query) || (item.content && item.content.toLowerCase().includes(query))) {
+                        matches.push({ name, path: pathStr, item });
+                    }
+                    if (item.type === 'folder') {
+                        searchFolder(item, `${pathStr} > ${name}`);
+                    }
+                });
+            }
+
+            searchFolder(fileSystem["HD>"], "HD>");
+
+            if (matches.length === 0) {
+                resultsContainer.innerHTML = `<p style="color: #4a7796; font-style: italic;">No matching files or folders found for "${query}".</p>`;
+                return;
+            }
+
+            matches.forEach(m => {
+                const resCard = document.createElement('div');
+                resCard.className = 'aquafer-card';
+                resCard.style.cursor = 'pointer';
+                resCard.style.marginBottom = '8px';
+
+                const title = document.createElement('h4');
+                title.style.color = '#10344d';
+                title.textContent = m.name;
+
+                const pathP = document.createElement('p');
+                pathP.style.fontSize = '0.75rem';
+                pathP.style.color = '#3a698a';
+                pathP.textContent = `Location: ${m.path}`;
+
+                resCard.appendChild(title);
+                resCard.appendChild(pathP);
+
+                if (m.item.content) {
+                    const previewP = document.createElement('p');
+                    previewP.style.fontSize = '0.8rem';
+                    previewP.style.marginTop = '4px';
+                    previewP.style.color = '#1c3d52';
+                    previewP.textContent = m.item.content.length > 80 ? m.item.content.substring(0, 80) + '...' : m.item.content;
+                    resCard.appendChild(previewP);
+                }
+
+                resCard.addEventListener('click', () => {
+                    if (m.name.endsWith('.aqu')) {
+                        switchAquaferTab('wordpad');
+                        document.getElementById('aqu-file-name').value = m.name.replace('.aqu', '');
+                        document.getElementById('aqu-file-content').value = m.item.content || '';
+                    }
+                });
+
+                resultsContainer.appendChild(resCard);
+            });
+        }
+
+        /* GLOBAL TASKBAR SEARCH ENGINE */
+        const globalSearchInput = document.getElementById('global-search-input');
+        const globalSearchResults = document.getElementById('global-search-results');
+
+        globalSearchInput.addEventListener('input', () => {
+            const query = globalSearchInput.value.toLowerCase().trim();
+            globalSearchResults.innerHTML = "";
+
+            if (!query) {
+                globalSearchResults.classList.remove('is-active');
+                return;
+            }
+
+            const results = [];
+            function scanFolder(folderObj) {
+                if (!folderObj || !folderObj.contents) return;
+                Object.keys(folderObj.contents).forEach(name => {
+                    const item = folderObj.contents[name];
+                    if (name.toLowerCase().includes(query)) {
+                        results.push({ name, type: item.type === 'folder' ? 'Folder' : 'File', item });
+                    }
+                    if (item.type === 'folder') {
+                        scanFolder(item);
+                    }
+                });
+            }
+            scanFolder(fileSystem["HD>"]);
+
+            if (results.length === 0) {
+                globalSearchResults.classList.remove('is-active');
+                return;
+            }
+
+            globalSearchResults.classList.add('is-active');
+
+            results.forEach(res => {
+                const el = document.createElement('div');
+                el.className = 'search-result-item';
+
+                const typeSpan = document.createElement('span');
+                typeSpan.className = 'search-result-type';
+                typeSpan.textContent = res.type;
+
+                const nameSpan = document.createElement('span');
+                nameSpan.style.fontWeight = 'bold';
+                nameSpan.textContent = res.name;
+
+                el.appendChild(typeSpan);
+                el.appendChild(nameSpan);
+
+                el.addEventListener('click', () => {
+                    globalSearchResults.classList.remove('is-active');
+                    globalSearchInput.value = "";
+                    if (res.name.endsWith('.aqu')) {
+                        openAppWindow(aquaferWindow, 'aquafer', 'Aquafer', 'aquafer.png');
+                        switchAquaferTab('wordpad');
+                        document.getElementById('aqu-file-name').value = res.name.replace('.aqu', '');
+                        document.getElementById('aqu-file-content').value = res.item.content || '';
+                    } else {
+                        currentPath = ["HD>"];
+                        openAppWindow(diskeyWindow, 'diskey', 'Diskey', 'diskey.png');
+                        renderDiskey();
+                    }
+                });
+
+                globalSearchResults.appendChild(el);
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!globalSearchInput.contains(e.target) && !globalSearchResults.contains(e.target)) {
+                globalSearchResults.classList.remove('is-active');
+            }
+        });
+    </script>
+</body>
+</html>
