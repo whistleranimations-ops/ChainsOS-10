@@ -1,2 +1,2 @@
 # ChainsOS-10
-chainsOS is officially out!!!!
+version 2.1 is available now.
