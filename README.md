@@ -1,2 +1,1 @@
-# ChainsOS-10
-version dandelion is available now.
+chainsOS dandelion is available now.
