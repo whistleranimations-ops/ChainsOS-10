@@ -1,1 +1,1 @@
-chainsOS dandelion is available now.
+only ui updates from now on.
